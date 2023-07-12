@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sonath.dev.br/linguagens/javascript/index.html</loc>
-  </url>
-  <url>
     <loc>https://sonath.dev.br/linguagens/index.html</loc>
+    <lastmod>2023-07-11T18:28:37-03:00</lastmod>
   </url>
   <url>
-    <loc>https://sonath.dev.br/linguagens/python/index.html</loc>
+    <loc>https://sonath.dev.br/linguagens/python/teste/index.html</loc>
+    <lastmod>2023-07-11T18:28:37-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-dockerfile/index.html</loc>
   </url>
   <url>
     <loc>https://sonath.dev.br/docker/index.html</loc>
   </url>
   <url>
-    <loc>https://sonath.dev.br/categories/index.html</loc>
+    <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-start/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-wait-for-it/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/linguagens/python/index.html</loc>
+    <lastmod>2023-07-11T18:28:37-03:00</lastmod>
   </url>
   <url>
     <loc>https://sonath.dev.br/index.html</loc>
+    <lastmod>2023-07-11T18:28:37-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/docker/compose/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/linguagens/javascript/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/docker/compose/python-fastapi/index.html</loc>
   </url>
   <url>
     <loc>https://sonath.dev.br/tags/index.html</loc>

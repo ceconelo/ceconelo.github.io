@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.115.2">
+    <meta name="generator" content="Relearn 5.17.1+tip">
+    <meta name="description" content="Base de conhecimento de Sonath Developer BR">
+    <meta name="author" content="Thiago Oliveira">
+    <title>Dev/wait-for-it :: Sonath - Wiki</title>
+    <link href="/docker/compose/python-fastapi/dev-wait-for-it/index.xml" rel="alternate" type="application/rss+xml" title="Dev/wait-for-it :: Sonath - Wiki">
+    <link href="/docker/compose/python-fastapi/dev-wait-for-it/index.print.html" rel="alternate" type="text/html" title="Dev/wait-for-it :: Sonath - Wiki">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1689136943" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1689136943" rel="stylesheet">
+    <link href="/css/fonts.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1689136943" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1689136943" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1689136943" rel="stylesheet">
+    <link href="/css/print.css?1689136943" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1689136943" rel="stylesheet">
+    <script src="/js/url.js?1689136943"></script>
+    <script src="/js/variant.js?1689136943"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/sonath.dev.br/';
+      window.variants && variants.init( [ 'sonath' ] );
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/docker/compose/python-fastapi/dev-wait-for-it/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+            <span class="nav nav-next topbar-link"><i class="fa fa-chevron-right fa-fw"></i></span>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev topbar-link" href="/docker/compose/python-fastapi/dev-start/index.html" title="Dev/start (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/docker/compose/python-fastapi/dev-wait-for-it/index.print.html">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/docker/compose/python-fastapi/dev-wait-for-it.md" target="_blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/index.html"><span itemprop="name">Compose</span></a><meta itemprop="position" content="3"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/python-fastapi/index.html"><span itemprop="name">Python-FastAPI</span></a><meta itemprop="position" content="4"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Dev/wait-for-it</span><meta itemprop="position" content="5"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#wait-for-it">wait-for-it</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="devwait-for-it">Dev/wait-for-it</h1>
+
+<h3 id="wait-for-it">wait-for-it</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e5e5e5">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#e5e5e5"></span><span style="color:#0f0"># Use this script to test if a given TCP host/port are available</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_cmdname</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">0</span>##*/<span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echoerr() { <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_QUIET</span> -ne <span style="color:#f60">1</span> ]]; <span style="color:#f00">then</span> echo <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$@</span><span style="color:#87ceeb">&#34;</span> 1&gt;&amp;2; <span style="color:#f00">fi</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>usage()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cat <span style="color:#87ceeb">&lt;&lt; USAGE &gt;&amp;2
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">Usage:
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    $WAITFORIT_cmdname host:port [-s] [-t timeout] [-- command args]
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -h HOST | --host=HOST       Host or IP under test
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -p PORT | --port=PORT       TCP port under test
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">                                Alternatively, you specify the host and port as host:port
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -s | --strict               Only execute subcommand if the test succeeds
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -q | --quiet                Don&#39;t output any status messages
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -t TIMEOUT | --timeout=TIMEOUT
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">                                Timeout in seconds, zero for no timeout
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">    -- COMMAND ARGS             Execute command with args after the test finishes
+</span></span></span><span style="display:flex;"><span><span style="color:#87ceeb">USAGE</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wait_for()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> -gt <span style="color:#f60">0</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        echoerr <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_cmdname</span><span style="color:#87ceeb">: waiting </span><span style="color:#eedd82">$WAITFORIT_TIMEOUT</span><span style="color:#87ceeb"> seconds for </span><span style="color:#eedd82">$WAITFORIT_HOST</span><span style="color:#87ceeb">:</span><span style="color:#eedd82">$WAITFORIT_PORT</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>        echoerr <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_cmdname</span><span style="color:#87ceeb">: waiting for </span><span style="color:#eedd82">$WAITFORIT_HOST</span><span style="color:#87ceeb">:</span><span style="color:#eedd82">$WAITFORIT_PORT</span><span style="color:#87ceeb"> without a timeout&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_start_ts</span>=<span style="color:#f00">$(</span>date +%s<span style="color:#f00">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">while</span> :
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">do</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_ISBUSY</span> -eq <span style="color:#f60">1</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>            nc -z <span style="color:#eedd82">$WAITFORIT_HOST</span> <span style="color:#eedd82">$WAITFORIT_PORT</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#eedd82">WAITFORIT_result</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>            (echo -n &gt; /dev/tcp/<span style="color:#eedd82">$WAITFORIT_HOST</span>/<span style="color:#eedd82">$WAITFORIT_PORT</span>) &gt;/dev/null 2&gt;&amp;<span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#eedd82">WAITFORIT_result</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_result</span> -eq <span style="color:#f60">0</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#eedd82">WAITFORIT_end_ts</span>=<span style="color:#f00">$(</span>date +%s<span style="color:#f00">)</span>
+</span></span><span style="display:flex;"><span>            echoerr <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_cmdname</span><span style="color:#87ceeb">: </span><span style="color:#eedd82">$WAITFORIT_HOST</span><span style="color:#87ceeb">:</span><span style="color:#eedd82">$WAITFORIT_PORT</span><span style="color:#87ceeb"> is available after </span><span style="color:#f00">$((</span>WAITFORIT_end_ts - WAITFORIT_start_ts<span style="color:#f00">))</span><span style="color:#87ceeb"> seconds&#34;</span>
+</span></span><span style="display:flex;"><span>            break
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>        sleep <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">done</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">return</span> <span style="color:#eedd82">$WAITFORIT_result</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wait_for_wrapper()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#0f0"># In order to support SIGINT during timeout: http://unix.stackexchange.com/a/57692</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_QUIET</span> -eq <span style="color:#f60">1</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        timeout <span style="color:#eedd82">$WAITFORIT_BUSYTIMEFLAG</span> <span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> <span style="color:#eedd82">$0</span> --quiet --child --host=<span style="color:#eedd82">$WAITFORIT_HOST</span> --port=<span style="color:#eedd82">$WAITFORIT_PORT</span> --timeout=<span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> &amp;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>        timeout <span style="color:#eedd82">$WAITFORIT_BUSYTIMEFLAG</span> <span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> <span style="color:#eedd82">$0</span> --child --host=<span style="color:#eedd82">$WAITFORIT_HOST</span> --port=<span style="color:#eedd82">$WAITFORIT_PORT</span> --timeout=<span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> &amp;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_PID</span>=<span style="color:#eedd82">$!</span>
+</span></span><span style="display:flex;"><span>    trap <span style="color:#87ceeb">&#34;kill -INT -</span><span style="color:#eedd82">$WAITFORIT_PID</span><span style="color:#87ceeb">&#34;</span> INT
+</span></span><span style="display:flex;"><span>    wait <span style="color:#eedd82">$WAITFORIT_PID</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_RESULT</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_RESULT</span> -ne <span style="color:#f60">0</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        echoerr <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_cmdname</span><span style="color:#87ceeb">: timeout occurred after waiting </span><span style="color:#eedd82">$WAITFORIT_TIMEOUT</span><span style="color:#87ceeb"> seconds for </span><span style="color:#eedd82">$WAITFORIT_HOST</span><span style="color:#87ceeb">:</span><span style="color:#eedd82">$WAITFORIT_PORT</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">return</span> <span style="color:#eedd82">$WAITFORIT_RESULT</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0f0"># process arguments</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">while</span> [[ <span style="color:#eedd82">$#</span> -gt <span style="color:#f60">0</span> ]]
+</span></span><span style="display:flex;"><span><span style="color:#f00">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">case</span> <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$1</span><span style="color:#87ceeb">&#34;</span> in
+</span></span><span style="display:flex;"><span>        *:* )
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_hostport</span>=(<span style="color:#87ceeb">${</span><span style="color:#eedd82">1</span>//:/ <span style="color:#87ceeb">}</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_HOST</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_hostport</span>[0]<span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_PORT</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_hostport</span>[1]<span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --child)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_CHILD</span>=<span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        -q | --quiet)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_QUIET</span>=<span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        -s | --strict)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_STRICT</span>=<span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        -h)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_HOST</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$2</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_HOST</span> == <span style="color:#87ceeb">&#34;&#34;</span> ]]; <span style="color:#f00">then</span> break; <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --host=*)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_HOST</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#87ceeb">${</span><span style="color:#eedd82">1</span>#*=<span style="color:#87ceeb">}</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        -p)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_PORT</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$2</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_PORT</span> == <span style="color:#87ceeb">&#34;&#34;</span> ]]; <span style="color:#f00">then</span> break; <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --port=*)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_PORT</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#87ceeb">${</span><span style="color:#eedd82">1</span>#*=<span style="color:#87ceeb">}</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        -t)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_TIMEOUT</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$2</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> == <span style="color:#87ceeb">&#34;&#34;</span> ]]; <span style="color:#f00">then</span> break; <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">2</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --timeout=*)
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_TIMEOUT</span>=<span style="color:#87ceeb">&#34;</span><span style="color:#87ceeb">${</span><span style="color:#eedd82">1</span>#*=<span style="color:#87ceeb">}</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        shift <span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --)
+</span></span><span style="display:flex;"><span>        shift
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_CLI</span>=(<span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$@</span><span style="color:#87ceeb">&#34;</span>)
+</span></span><span style="display:flex;"><span>        break
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        --help)
+</span></span><span style="display:flex;"><span>        usage
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>        *)
+</span></span><span style="display:flex;"><span>        echoerr <span style="color:#87ceeb">&#34;Unknown argument: </span><span style="color:#eedd82">$1</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span>        usage
+</span></span><span style="display:flex;"><span>        ;;
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">esac</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">if</span> [[ <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_HOST</span><span style="color:#87ceeb">&#34;</span> == <span style="color:#87ceeb">&#34;&#34;</span> || <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_PORT</span><span style="color:#87ceeb">&#34;</span> == <span style="color:#87ceeb">&#34;&#34;</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>    echoerr <span style="color:#87ceeb">&#34;Error: you need to provide a host and port to test.&#34;</span>
+</span></span><span style="display:flex;"><span>    usage
+</span></span><span style="display:flex;"><span><span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_TIMEOUT</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_TIMEOUT</span><span style="color:#f00">:-</span><span style="color:#eedd82">15</span><span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_STRICT</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_STRICT</span><span style="color:#f00">:-</span><span style="color:#eedd82">0</span><span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_CHILD</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_CHILD</span><span style="color:#f00">:-</span><span style="color:#eedd82">0</span><span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_QUIET</span>=<span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_QUIET</span><span style="color:#f00">:-</span><span style="color:#eedd82">0</span><span style="color:#87ceeb">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0f0"># Check to see if timeout is from busybox?</span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_TIMEOUT_PATH</span>=<span style="color:#f00">$(</span>type -p timeout<span style="color:#f00">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_TIMEOUT_PATH</span>=<span style="color:#f00">$(</span>realpath <span style="color:#eedd82">$WAITFORIT_TIMEOUT_PATH</span> 2&gt;/dev/null || readlink -f <span style="color:#eedd82">$WAITFORIT_TIMEOUT_PATH</span><span style="color:#f00">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#eedd82">WAITFORIT_BUSYTIMEFLAG</span>=<span style="color:#87ceeb">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_TIMEOUT_PATH</span> =~ <span style="color:#87ceeb">&#34;busybox&#34;</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_ISBUSY</span>=<span style="color:#f60">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0f0"># Check if busybox timeout uses -t flag</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0f0"># (recent Alpine versions don&#39;t support -t anymore)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> timeout &amp;&gt;/dev/stdout | grep -q -e <span style="color:#87ceeb">&#39;-t &#39;</span>; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_BUSYTIMEFLAG</span>=<span style="color:#87ceeb">&#34;-t&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_ISBUSY</span>=<span style="color:#f60">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_CHILD</span> -gt <span style="color:#f60">0</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>    wait_for
+</span></span><span style="display:flex;"><span>    <span style="color:#eedd82">WAITFORIT_RESULT</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#eedd82">$WAITFORIT_RESULT</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_TIMEOUT</span> -gt <span style="color:#f60">0</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        wait_for_wrapper
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_RESULT</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>        wait_for
+</span></span><span style="display:flex;"><span>        <span style="color:#eedd82">WAITFORIT_RESULT</span>=<span style="color:#eedd82">$?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_CLI</span> != <span style="color:#87ceeb">&#34;&#34;</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">if</span> [[ <span style="color:#eedd82">$WAITFORIT_RESULT</span> -ne <span style="color:#f60">0</span> &amp;&amp; <span style="color:#eedd82">$WAITFORIT_STRICT</span> -eq <span style="color:#f60">1</span> ]]; <span style="color:#f00">then</span>
+</span></span><span style="display:flex;"><span>        echoerr <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$WAITFORIT_cmdname</span><span style="color:#87ceeb">: strict mode, refusing to execute subprocess&#34;</span>
+</span></span><span style="display:flex;"><span>        exit <span style="color:#eedd82">$WAITFORIT_RESULT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">fi</span>
+</span></span><span style="display:flex;"><span>    exec <span style="color:#87ceeb">&#34;</span><span style="color:#87ceeb">${</span><span style="color:#eedd82">WAITFORIT_CLI</span>[@]<span style="color:#87ceeb">}</span><span style="color:#87ceeb">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">else</span>
+</span></span><span style="display:flex;"><span>    exit <span style="color:#eedd82">$WAITFORIT_RESULT</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">fi</span></span></span></code></pre></div>
+            <footer class="footline">
+
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+
+        </div>
+        <form action="/search.html" method="get"><div class="searchbox default-animation">
+          <button type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div></form>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1689136943" defer></script>
+        <script src="/js/lunr/lunr.min.js?1689136943" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1689136943" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1689136943" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1689136943" defer></script>
+        <script src="/js/search.js?1689136943" defer></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics enlarge morespace collapsible-menu">
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/index.html" class="alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/teste/index.html" class=""><a class="padding" href="/linguagens/python/teste/index.html">Teste<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/docker/index.html" class="parent "><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0" checked><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/index.html" class="parent alwaysopen"><input type="checkbox" id="section-49e713816928b075d1c87851fb4ac762" aria-controls="subsections-49e713816928b075d1c87851fb4ac762" checked><label for="section-49e713816928b075d1c87851fb4ac762"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Compose</span></label><a class="padding" href="/docker/compose/index.html">Compose<i class="fas fa-check read-icon"></i></a><ul id="subsections-49e713816928b075d1c87851fb4ac762" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/python-fastapi/index.html" class="parent alwaysopen"><input type="checkbox" id="section-b57fd44a68c7a41a570050d6dfa81a21" aria-controls="subsections-b57fd44a68c7a41a570050d6dfa81a21" checked><label for="section-b57fd44a68c7a41a570050d6dfa81a21"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python-FastAPI</span></label><a class="padding" href="/docker/compose/python-fastapi/index.html">Python-FastAPI<i class="fas fa-check read-icon"></i></a><ul id="subsections-b57fd44a68c7a41a570050d6dfa81a21" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html">Dev/Zsh<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-dockerfile/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-dockerfile/index.html">Dev/dockerfile<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-start/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-start/index.html">Dev/start<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-wait-for-it/index.html" class="active"><a class="padding" href="/docker/compose/python-fastapi/dev-wait-for-it/index.html">Dev/wait-for-it<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+        </ul>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="sonath" value="sonath" selected>Sonath</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i><span>&nbsp;</span>Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><p style="font-size: 0.95rem;">Made with ❤️ by <a href="https://www.linkedin.com/in/thiagoceconelo/">Thiago Oliveira</a></p>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1689136943" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1689136943" defer></script>
+    <script src="/js/theme.js?1689136943" defer></script>
+  </body>
+</html>

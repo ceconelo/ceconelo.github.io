@@ -5,6 +5,16 @@
     <link>https://sonath.dev.br/linguagens/python/index.html</link>
     <description>Recent content in Python on Sonath - Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language><atom:link href="https://sonath.dev.br/linguagens/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 11 Jul 2023 18:28:37 -0300</lastBuildDate><atom:link href="https://sonath.dev.br/linguagens/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teste</title>
+      <link>https://sonath.dev.br/linguagens/python/teste/index.html</link>
+      <pubDate>Tue, 11 Jul 2023 18:28:37 -0300</pubDate>
+      <guid>https://sonath.dev.br/linguagens/python/teste/index.html</guid>
+      <description>GAMPS is a GoboLinux/Apache/MySql/P/SSL web serving system. This document is intended to be a step-by-step manual on setting up a MySQL database server and Apache web server with PHP/Python/Perl/SSL support in GoboLinux.
+MySQL First, you have to install MySQL. Fire up a console and type Compile mysql. Once you&amp;rsquo;ve answered Compile&amp;rsquo;s initial wave of questions, you should have enough time to make yourself some coffee.
+When the compilation has finished, you may choose a config file to use.</description>
+    </item>
   </channel>
 </rss>

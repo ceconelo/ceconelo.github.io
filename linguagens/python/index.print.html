@@ -11,19 +11,19 @@
     <link href="https://sonath.dev.br/linguagens/python/index.html" rel="canonical" type="text/html" title="Python :: Sonath - Wiki">
     <link href="/linguagens/python/index.xml" rel="alternate" type="application/rss+xml" title="Python :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1689133585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689133585" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1689133585" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689133585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689133585" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1689133585" rel="stylesheet">
-    <link href="/css/fonts.css?1689133585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689133585" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1689133585" rel="stylesheet">
-    <link href="/css/theme-sonath.css?1689133585" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1689133585" rel="stylesheet">
-    <link href="/css/print.css?1689133585" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1689133585" rel="stylesheet">
-    <link href="/css/ie.css?1689133585" rel="stylesheet">
-    <script src="/js/url.js?1689133585"></script>
-    <script src="/js/variant.js?1689133585"></script>
+    <link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1689136943" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1689136943" rel="stylesheet">
+    <link href="/css/fonts.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689136943" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1689136943" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1689136943" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1689136943" rel="stylesheet">
+    <link href="/css/print.css?1689136943" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1689136943" rel="stylesheet">
+    <link href="/css/ie.css?1689136943" rel="stylesheet">
+    <script src="/js/url.js?1689136943"></script>
+    <script src="/js/variant.js?1689136943"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -74,11 +74,95 @@
             </footer>
           </article>
 
+          <section>
+            <h1 class="a11y-only">Subsections of Python</h1>
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="teste">Teste</h1>
+
+<p>GAMPS is a GoboLinux/Apache/MySql/P/SSL web serving system. This document is
+intended to be a step-by-step manual on setting up a MySQL database server and
+Apache web server with PHP/Python/Perl/SSL support in GoboLinux.</p>
+<h2 id="mysql">MySQL</h2>
+<ol>
+<li>First, you have to install MySQL. Fire up a console and type <code>Compile mysql</code>.</li>
+</ol>
+<p>Once you&rsquo;ve answered Compile&rsquo;s initial wave of questions, you should have enough
+time to make yourself some coffee.</p>
+<ul>
+<li>When the compilation has finished, you may choose a config file to use. The
+mysql configuration is stored in <code>/Programs/MySQL/Settings/mysql</code>, and the
+config file actually used has to be named <code>my.cnf</code>. The default config file
+is <code>my-small.cnf</code>. If you&rsquo;re happy with this, go to the next step; otherwise
+choose one of the other config files and overwrite <code>my.cnf</code> with it.</li>
+<li>Now it&rsquo;s time to start the MySQL server. Do this by typing</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">StartTask</span> MySQL</span></span></code></pre></div>
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>If the server crashes at this moment you might want to check
+the permissions of <code>/Data/MySQL</code>. Owner and group must both be <code>mysql</code>. You can
+achieve this by typing</p>
+<p>and starting the server again.</p>
+</div>
+</div>
+<ul>
+<li>The next step is to set a password for the MySQL root user. Type</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">mysqladmin</span> -u root password mYNewpAsSw0rD</span></span></code></pre></div><ul>
+<li>If you want to start the MySQL server automatically at boot time, type</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#f00">echo</span> <span style="color:#87ceeb">&#39;Exec &#34;Starting MySQL Database Server...&#34; MySQL Start&#39;</span> <span style="color:#87ceeb">\ </span>&gt;&gt; /System/Settings/BootScripts/BootUp</span></span></code></pre></div><ul>
+<li>You can test your MySQL installation by typing</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">mysql</span> -u root -p</span></span></code></pre></div><p>If everything worked, you&rsquo;ll be prompted for a password, then taken to the MySQL
+monitor.</p>
+<h2 id="openssl---part-1">OpenSSL - Part 1</h2>
+<h2 id="apache">Apache</h2>
+<ul>
+<li>As usual, compiling is the first step:</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> HTTPD</span></span></code></pre></div><ul>
+<li>After compilng, Apache should be ready to start. Just type</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">StartTask</span> HTTPD</span></span></code></pre></div><ul>
+<li>If you want to start the Apache server automatically at boot time, type</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#f00">echo</span> <span style="color:#87ceeb">&#39;Exec &#34;Starting Apache Web Server...&#34; HTTPD Start&#39;</span> <span style="color:#87ceeb">\ </span>&gt;&gt; /System/Settings/BootScripts/BootUp</span></span></code></pre></div><h2 id="openssl---part-2">OpenSSL - Part 2</h2>
+<p>TODO</p>
+<h2 id="php">PHP</h2>
+<ul>
+<li>To install Apache PHP Module, type</li>
+</ul>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> Mod_PHP</span></span></code></pre></div><p>You have to restart Apache to load the new PHP module: <code>StopTask HTTPD</code> then
+<code>StartTask HTTPD</code>.</p>
+<h2 id="python">Python</h2>
+<p>Compile the module</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> Mod_Python</span></span></code></pre></div><p>Restart Apache again</p>
+<p><code>StopTask HTTPD</code>, <code>StartTask HTTPD</code></p>
+<p>If you use HTTPD 2.0.x you have to edit your <code>httpd.conf</code>
+(<code>/Programs/HTTPD/Settings/httpd/httpd.conf</code>) to load the Python module with
+Apache. Add the following line after the other <code>LoadModule</code> directives:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">LoadModule</span> python_module modules/mod_python.so AddType application/x-python-code pyo pyc AddType text/x-python py</span></span></code></pre></div><h2 id="perl">Perl</h2>
+<p>TODO</p>
+<h2 id="celebrate">Celebrate!</h2>
+<p>You&rsquo;re done! All you have to do now is place your websites at
+<code>/Depot/WWW/Documents</code></p>
+
+            <footer class="footline">
+
+            </footer>
+          </article>
+
+          </section>
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1689133585" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1689133585" defer></script>
-    <script src="/js/theme.js?1689133585" defer></script>
+    <script src="/js/clipboard.min.js?1689136943" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1689136943" defer></script>
+    <script src="/js/theme.js?1689136943" defer></script>
   </body>
 </html>
