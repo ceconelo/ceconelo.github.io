@@ -7,9 +7,9 @@
     <meta name="generator" content="Relearn 5.17.1+tip">
     <meta name="description" content="Base de conhecimento de Sonath Developer BR">
     <meta name="author" content="Thiago Oliveira">
-    <title>Teste :: Sonath - Wiki</title>
-    <link href="/linguagens/python/teste/index.xml" rel="alternate" type="application/rss+xml" title="Teste :: Sonath - Wiki">
-    <link href="/linguagens/python/teste/index.print.html" rel="alternate" type="text/html" title="Teste :: Sonath - Wiki">
+    <title>Backups :: Sonath - Wiki</title>
+    <link href="/docker/backup/index.xml" rel="alternate" type="application/rss+xml" title="Backups :: Sonath - Wiki">
+    <link href="/docker/backup/index.print.html" rel="alternate" type="text/html" title="Backups :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1689181548" rel="stylesheet">
@@ -41,25 +41,25 @@
       window.variants && variants.init( [ 'sonath' ] );
     </script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/linguagens/python/teste/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/docker/backup/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-            <a class="nav nav-next topbar-link" href="/linguagens/javascript/index.html" title="Javascript (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <a class="nav nav-next topbar-link" href="/docker/compose/index.html" title="Compose (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev topbar-link" href="/linguagens/python/index.html" title="Python (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev topbar-link" href="/docker/index.html" title="Docker (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-print-link">
-            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/linguagens/python/teste/index.print.html">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/docker/backup/index.print.html">
               <i class="fas fa-print fa-fw"></i>
             </a>
           </div>
           <div id="top-github-link">
-            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/linguagens/python/teste.md" target="_blank">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/docker/backup.md" target="_blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
@@ -70,22 +70,22 @@
             <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/linguagens/index.html"><span itemprop="name">Linguagens</span></a><meta itemprop="position" content="2"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/linguagens/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="3"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Teste</span><meta itemprop="position" content="4"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Backups</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
           <div class="default-animation progress">
             <div class="toc-wrapper"><nav id="TableOfContents">
   <ul>
-    <li><a href="#mysql">MySQL</a></li>
-    <li><a href="#openssl---part-1">OpenSSL - Part 1</a></li>
-    <li><a href="#apache">Apache</a></li>
-    <li><a href="#openssl---part-2">OpenSSL - Part 2</a></li>
-    <li><a href="#php">PHP</a></li>
-    <li><a href="#python">Python</a></li>
-    <li><a href="#perl">Perl</a></li>
-    <li><a href="#celebrate">Celebrate!</a></li>
+    <li>
+      <ul>
+        <li><a href="#contexto">Contexto</a>
+          <ul>
+            <li><a href="#passo-a-passo">Passo a passo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
             </div>
@@ -97,78 +97,56 @@
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="teste">Teste</h1>
+<h1 id="backups">Backups</h1>
 
-<p>GAMPS is a GoboLinux/Apache/MySql/P/SSL web serving system. This document is
-intended to be a step-by-step manual on setting up a MySQL database server and
-Apache web server with PHP/Python/Perl/SSL support in GoboLinux.</p>
-<h2 id="mysql">MySQL</h2>
+<h3 id="contexto">Contexto</h3>
+<p>Um cliente pediu para eu fazer um teste em uma aplicação que estava rodando em um droplet da Digital Ocean.
+O teste era simples, mas seguindo boas práticas não iria fazer isso direto no servidor de produção dele. Então o que fiz
+foi subir um container com a aplicação dele localmente.</p>
+<p>Abaixo vou deixar o passo a passo que realizei para trazer o banco de dados para o meu ambiente local.</p>
+<p><code>Banco de dados utilizado: PostgreSQL</code></p>
+<h4 id="passo-a-passo">Passo a passo</h4>
 <ol>
-<li>First, you have to install MySQL. Fire up a console and type <code>Compile mysql</code>.</li>
+<li>Conectar-se ao servidor DigitalOcean</li>
 </ol>
-<p>Once you&rsquo;ve answered Compile&rsquo;s initial wave of questions, you should have enough
-time to make yourself some coffee.</p>
-<ul>
-<li>When the compilation has finished, you may choose a config file to use. The
-mysql configuration is stored in <code>/Programs/MySQL/Settings/mysql</code>, and the
-config file actually used has to be named <code>my.cnf</code>. The default config file
-is <code>my-small.cnf</code>. If you&rsquo;re happy with this, go to the next step; otherwise
-choose one of the other config files and overwrite <code>my.cnf</code> with it.</li>
-<li>Now it&rsquo;s time to start the MySQL server. Do this by typing</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">StartTask</span> MySQL</span></span></code></pre></div>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh root@&lt;ip <span style="color:#f00">do</span> servidor&gt;</span></span></code></pre></div>
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
   <div class="box-content">
 
-<p>If the server crashes at this moment you might want to check
-the permissions of <code>/Data/MySQL</code>. Owner and group must both be <code>mysql</code>. You can
-achieve this by typing</p>
-<p>and starting the server again.</p>
+<p>Certifique-se de substituir &ldquo;ip do servidor&rdquo; pelo endereço IP real do seu servidor.</p>
 </div>
 </div>
-<ul>
-<li>The next step is to set a password for the MySQL root user. Type</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">mysqladmin</span> -u root password mYNewpAsSw0rD</span></span></code></pre></div><ul>
-<li>If you want to start the MySQL server automatically at boot time, type</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#f00">echo</span> <span style="color:#87ceeb">&#39;Exec &#34;Starting MySQL Database Server...&#34; MySQL Start&#39;</span> <span style="color:#87ceeb">\ </span>&gt;&gt; /System/Settings/BootScripts/BootUp</span></span></code></pre></div><ul>
-<li>You can test your MySQL installation by typing</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">mysql</span> -u root -p</span></span></code></pre></div><p>If everything worked, you&rsquo;ll be prompted for a password, then taken to the MySQL
-monitor.</p>
-<h2 id="openssl---part-1">OpenSSL - Part 1</h2>
-<h2 id="apache">Apache</h2>
-<ul>
-<li>As usual, compiling is the first step:</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> HTTPD</span></span></code></pre></div><ul>
-<li>After compilng, Apache should be ready to start. Just type</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">StartTask</span> HTTPD</span></span></code></pre></div><ul>
-<li>If you want to start the Apache server automatically at boot time, type</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#f00">echo</span> <span style="color:#87ceeb">&#39;Exec &#34;Starting Apache Web Server...&#34; HTTPD Start&#39;</span> <span style="color:#87ceeb">\ </span>&gt;&gt; /System/Settings/BootScripts/BootUp</span></span></code></pre></div><h2 id="openssl---part-2">OpenSSL - Part 2</h2>
-<p>TODO</p>
-<h2 id="php">PHP</h2>
-<ul>
-<li>To install Apache PHP Module, type</li>
-</ul>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> Mod_PHP</span></span></code></pre></div><p>You have to restart Apache to load the new PHP module: <code>StopTask HTTPD</code> then
-<code>StartTask HTTPD</code>.</p>
-<h2 id="python">Python</h2>
-<p>Compile the module</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">Compile</span> Mod_Python</span></span></code></pre></div><p>Restart Apache again</p>
-<p><code>StopTask HTTPD</code>, <code>StartTask HTTPD</code></p>
-<p>If you use HTTPD 2.0.x you have to edit your <code>httpd.conf</code>
-(<code>/Programs/HTTPD/Settings/httpd/httpd.conf</code>) to load the Python module with
-Apache. Add the following line after the other <code>LoadModule</code> directives:</p>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#ff0">LoadModule</span> python_module modules/mod_python.so AddType application/x-python-code pyo pyc AddType text/x-python py</span></span></code></pre></div><h2 id="perl">Perl</h2>
-<p>TODO</p>
-<h2 id="celebrate">Celebrate!</h2>
-<p>You&rsquo;re done! All you have to do now is place your websites at
-<code>/Depot/WWW/Documents</code></p>
+<ol start="2">
+<li>Criar um arquivo tar do volume Docker</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run --rm -v postgres_data:/volume -v <span style="color:#f00">$(</span>pwd<span style="color:#f00">)</span>:/backup alpine tar -cjf /backup/postgres_data.tar.bz2 -C /volume .</span></span></code></pre></div><p>Isso criará um arquivo chamado &ldquo;postgres_data.tar.bz2&rdquo; no diretório atual dentro do servidor DigitalOcean.
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>Certifique-se de substituir &ldquo;postgres_data&rdquo; pelo nome do volume que você deseja fazer backup.</p>
+</div>
+</div></p>
+<ol start="3">
+<li>Copiar o arquivo tar para o seu computador local</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scp root@seu_endereco_ip:/caminho/para/postgres_data.tar.bz2 /caminho/local/para/salvar/o/arquivo/</span></span></code></pre></div><ol start="4">
+<li>Descompactar o arquivo tar</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tar -xjf postgres_data.tar.bz2</span></span></code></pre></div><ol start="5">
+<li>
+<p>Neste passo você tem duas opções:</p>
+<ol>
+<li>Criar um container com o volume descompactado</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d -v /caminho/local/para/postgres_data:/var/lib/postgresql/data -e <span style="color:#eedd82">POSTGRES_PASSWORD</span>=sua_senha -p 5432:5432 postgres</span></span></code></pre></div><ol start="2">
+<li>Ou adicionar o volume diretamente em seu arquivo docker compose:</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>volumes:
+</span></span><span style="display:flex;"><span>  - /caminho/local/para/postgres_data:/var/lib/postgresql/data</span></span></code></pre></div></li>
+</ol>
 
             <footer class="footline">
 
@@ -200,12 +178,12 @@ Apache. Add the following line after the other <code>LoadModule</code> directive
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics enlarge morespace collapsible-menu">
-          <li data-nav-id="/linguagens/index.html" class="parent "><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53" checked><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
-          <li data-nav-id="/linguagens/python/index.html" class="parent alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
-          <li data-nav-id="/linguagens/python/teste/index.html" class="active"><a class="padding" href="/linguagens/python/teste/index.html">Teste<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/index.html" class="alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/teste/index.html" class=""><a class="padding" href="/linguagens/python/teste/index.html">Teste<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docker/index.html" class=""><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0"><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
-          <li data-nav-id="/docker/backup/index.html" class=""><a class="padding" href="/docker/backup/index.html">Backups<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/index.html" class="parent "><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0" checked><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/backup/index.html" class="active"><a class="padding" href="/docker/backup/index.html">Backups<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/index.html" class="alwaysopen"><input type="checkbox" id="section-49e713816928b075d1c87851fb4ac762" aria-controls="subsections-49e713816928b075d1c87851fb4ac762" checked><label for="section-49e713816928b075d1c87851fb4ac762"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Compose</span></label><a class="padding" href="/docker/compose/index.html">Compose<i class="fas fa-check read-icon"></i></a><ul id="subsections-49e713816928b075d1c87851fb4ac762" class="morespace collapsible-menu">
           <li data-nav-id="/docker/compose/python-fastapi/index.html" class="alwaysopen"><input type="checkbox" id="section-b57fd44a68c7a41a570050d6dfa81a21" aria-controls="subsections-b57fd44a68c7a41a570050d6dfa81a21" checked><label for="section-b57fd44a68c7a41a570050d6dfa81a21"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python-FastAPI</span></label><a class="padding" href="/docker/compose/python-fastapi/index.html">Python-FastAPI<i class="fas fa-check read-icon"></i></a><ul id="subsections-b57fd44a68c7a41a570050d6dfa81a21" class="morespace collapsible-menu">
           <li data-nav-id="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html">Dev/Zsh<i class="fas fa-check read-icon"></i></a></li>

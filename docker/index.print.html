@@ -11,19 +11,19 @@
     <link href="https://sonath.dev.br/docker/index.html" rel="canonical" type="text/html" title="Docker :: Sonath - Wiki">
     <link href="/docker/index.xml" rel="alternate" type="application/rss+xml" title="Docker :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1689180303" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689180303" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1689180303" rel="stylesheet">
-    <link href="/css/fonts.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689180303" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1689180303" rel="stylesheet">
-    <link href="/css/theme-sonath.css?1689180303" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1689180303" rel="stylesheet">
-    <link href="/css/print.css?1689180303" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1689180303" rel="stylesheet">
-    <link href="/css/ie.css?1689180303" rel="stylesheet">
-    <script src="/js/url.js?1689180303"></script>
-    <script src="/js/variant.js?1689180303"></script>
+    <link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1689181548" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689181548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689181548" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1689181548" rel="stylesheet">
+    <link href="/css/fonts.css?1689181548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689181548" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1689181548" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1689181548" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1689181548" rel="stylesheet">
+    <link href="/css/print.css?1689181548" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1689181548" rel="stylesheet">
+    <link href="/css/ie.css?1689181548" rel="stylesheet">
+    <script src="/js/url.js?1689181548"></script>
+    <script src="/js/variant.js?1689181548"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -88,20 +88,20 @@ isolado.</p>
 <p>Cgroups são grupos de controle, que permitem limitar e isolar recursos de um processo.</p>
 <p>Os containers são criados a partir de imagens montadas em camadas, que são armazenadas em um repositório chamado Docker Registry.</p>
 <p>
-<a href="#image-cff23bb2e3475617a21c6af2c71e0486" class="lightbox-link">
+<a href="#image-cc564ed688d1812674a4b67d863c5e89" class="lightbox-link">
 <img src="/images/docker/layers.png" alt="docker-layers" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-cff23bb2e3475617a21c6af2c71e0486">
+<a href="javascript:history.back();" class="lightbox" id="image-cc564ed688d1812674a4b67d863c5e89">
 <img src="/images/docker/layers.png" alt="docker-layers" class="lightbox-image" loading="lazy">
 </a></p>
 <p>Outra informação bem relevante é que as camadas mantém um estado imutável, ou seja, uma vez criada uma camada ela
 não pode ser alterada e que toda escrita é feita em uma camada temporária que é descartada quando o container é desligado.</p>
 <h3 id="visão-geral">Visão geral</h3>
 <p>
-<a href="#image-ca2de1b41053c45964da7a3d3619a9de" class="lightbox-link">
+<a href="#image-7c4df6dca374c4a27075308dc13fbfef" class="lightbox-link">
 <img src="/images/docker/big-picture.png" alt="docker-big-picture" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-ca2de1b41053c45964da7a3d3619a9de">
+<a href="javascript:history.back();" class="lightbox" id="image-7c4df6dca374c4a27075308dc13fbfef">
 <img src="/images/docker/big-picture.png" alt="docker-big-picture" class="lightbox-image" loading="lazy">
 </a></p>
 <p>Essa é uma visão geral sobre o docker. Para uma visão mais detalhada acesse o
@@ -136,6 +136,65 @@ não pode ser alterada e que toda escrita é feita em uma camada temporária que
 
           <section>
             <h1 class="a11y-only">Subsections of Docker</h1>
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="backups">Backups</h1>
+
+<h3 id="contexto">Contexto</h3>
+<p>Um cliente pediu para eu fazer um teste em uma aplicação que estava rodando em um droplet da Digital Ocean.
+O teste era simples, mas seguindo boas práticas não iria fazer isso direto no servidor de produção dele. Então o que fiz
+foi subir um container com a aplicação dele localmente.</p>
+<p>Abaixo vou deixar o passo a passo que realizei para trazer o banco de dados para o meu ambiente local.</p>
+<p><code>Banco de dados utilizado: PostgreSQL</code></p>
+<h4 id="passo-a-passo">Passo a passo</h4>
+<ol>
+<li>Conectar-se ao servidor DigitalOcean</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh root@&lt;ip <span style="color:#f00">do</span> servidor&gt;</span></span></code></pre></div>
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>Certifique-se de substituir &ldquo;ip do servidor&rdquo; pelo endereço IP real do seu servidor.</p>
+</div>
+</div>
+<ol start="2">
+<li>Criar um arquivo tar do volume Docker</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run --rm -v postgres_data:/volume -v <span style="color:#f00">$(</span>pwd<span style="color:#f00">)</span>:/backup alpine tar -cjf /backup/postgres_data.tar.bz2 -C /volume .</span></span></code></pre></div><p>Isso criará um arquivo chamado &ldquo;postgres_data.tar.bz2&rdquo; no diretório atual dentro do servidor DigitalOcean.
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>Certifique-se de substituir &ldquo;postgres_data&rdquo; pelo nome do volume que você deseja fazer backup.</p>
+</div>
+</div></p>
+<ol start="3">
+<li>Copiar o arquivo tar para o seu computador local</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scp root@seu_endereco_ip:/caminho/para/postgres_data.tar.bz2 /caminho/local/para/salvar/o/arquivo/</span></span></code></pre></div><ol start="4">
+<li>Descompactar o arquivo tar</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tar -xjf postgres_data.tar.bz2</span></span></code></pre></div><ol start="5">
+<li>
+<p>Neste passo você tem duas opções:</p>
+<ol>
+<li>Criar um container com o volume descompactado</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d -v /caminho/local/para/postgres_data:/var/lib/postgresql/data -e <span style="color:#eedd82">POSTGRES_PASSWORD</span>=sua_senha -p 5432:5432 postgres</span></span></code></pre></div><ol start="2">
+<li>Ou adicionar o volume diretamente em seu arquivo docker compose:</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>volumes:
+</span></span><span style="display:flex;"><span>  - /caminho/local/para/postgres_data:/var/lib/postgresql/data</span></span></code></pre></div></li>
+</ol>
+
+            <footer class="footline">
+
+            </footer>
+          </article>
+
           <article class="default">
             <header class="headline">
             </header>
@@ -2187,8 +2246,8 @@ Lembre-se de alterar isso para o seu projeto.</p>
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1689180303" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1689180303" defer></script>
-    <script src="/js/theme.js?1689180303" defer></script>
+    <script src="/js/clipboard.min.js?1689181548" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1689181548" defer></script>
+    <script src="/js/theme.js?1689181548" defer></script>
   </body>
 </html>

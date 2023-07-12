@@ -7,9 +7,9 @@
     <meta name="generator" content="Relearn 5.17.1+tip">
     <meta name="description" content="Base de conhecimento de Sonath Developer BR">
     <meta name="author" content="Thiago Oliveira">
-    <title>Dev/start :: Sonath - Wiki</title>
-    <link href="https://sonath.dev.br/docker/compose/python-fastapi/dev-start/index.html" rel="canonical" type="text/html" title="Dev/start :: Sonath - Wiki">
-    <link href="/docker/compose/python-fastapi/dev-start/index.xml" rel="alternate" type="application/rss+xml" title="Dev/start :: Sonath - Wiki">
+    <title>Backups :: Sonath - Wiki</title>
+    <link href="https://sonath.dev.br/docker/backup/index.html" rel="canonical" type="text/html" title="Backups :: Sonath - Wiki">
+    <link href="/docker/backup/index.xml" rel="alternate" type="application/rss+xml" title="Backups :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689181548" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1689181548" rel="stylesheet">
@@ -42,7 +42,7 @@
       window.variants && variants.init( [ 'sonath' ] );
     </script>
   </head>
-  <body class="mobile-support print disableInlineCopyToClipboard" data-url="/docker/compose/python-fastapi/dev-start/index.html">
+  <body class="mobile-support print disableInlineCopyToClipboard" data-url="/docker/backup/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -55,9 +55,7 @@
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/index.html"><span itemprop="name">Compose</span></a><meta itemprop="position" content="3"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/python-fastapi/index.html"><span itemprop="name">Python-FastAPI</span></a><meta itemprop="position" content="4"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Dev/start</span><meta itemprop="position" content="5"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Backups</span><meta itemprop="position" content="3"></li>
             </ol>
           </div>
         </div>
@@ -67,29 +65,56 @@
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="devstart">Dev/start</h1>
+<h1 id="backups">Backups</h1>
 
-<h3 id="start">start</h3>
-<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e5e5e5">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#e5e5e5"></span>
-</span></span><span style="display:flex;"><span><span style="color:#0f0"># if any of the commands in your code fails for any reason, the entire script fails</span>
-</span></span><span style="display:flex;"><span>set -o errexit
-</span></span><span style="display:flex;"><span><span style="color:#0f0"># fail exit if one of your pipe command fails</span>
-</span></span><span style="display:flex;"><span>set -o pipefail
-</span></span><span style="display:flex;"><span><span style="color:#0f0"># exits if any of your variables is not set</span>
-</span></span><span style="display:flex;"><span>set -o nounset
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>uvicorn main:app --reload --reload-dir src --host 0.0.0.0 --workers <span style="color:#f60">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>exec <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$@</span><span style="color:#87ceeb">&#34;</span></span></span></code></pre></div>
+<h3 id="contexto">Contexto</h3>
+<p>Um cliente pediu para eu fazer um teste em uma aplicação que estava rodando em um droplet da Digital Ocean.
+O teste era simples, mas seguindo boas práticas não iria fazer isso direto no servidor de produção dele. Então o que fiz
+foi subir um container com a aplicação dele localmente.</p>
+<p>Abaixo vou deixar o passo a passo que realizei para trazer o banco de dados para o meu ambiente local.</p>
+<p><code>Banco de dados utilizado: PostgreSQL</code></p>
+<h4 id="passo-a-passo">Passo a passo</h4>
+<ol>
+<li>Conectar-se ao servidor DigitalOcean</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh root@&lt;ip <span style="color:#f00">do</span> servidor&gt;</span></span></code></pre></div>
 <div class="box notices cstyle note">
   <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
   <div class="box-content">
 
-<p>No exemplo acima estou passando o modulo main e a variavel app ( <code>main:app</code> ), que é a instancia da classe FastAPI.
-Lembre-se de alterar isso para o seu projeto.</p>
+<p>Certifique-se de substituir &ldquo;ip do servidor&rdquo; pelo endereço IP real do seu servidor.</p>
 </div>
 </div>
+<ol start="2">
+<li>Criar um arquivo tar do volume Docker</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run --rm -v postgres_data:/volume -v <span style="color:#f00">$(</span>pwd<span style="color:#f00">)</span>:/backup alpine tar -cjf /backup/postgres_data.tar.bz2 -C /volume .</span></span></code></pre></div><p>Isso criará um arquivo chamado &ldquo;postgres_data.tar.bz2&rdquo; no diretório atual dentro do servidor DigitalOcean.
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>Certifique-se de substituir &ldquo;postgres_data&rdquo; pelo nome do volume que você deseja fazer backup.</p>
+</div>
+</div></p>
+<ol start="3">
+<li>Copiar o arquivo tar para o seu computador local</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scp root@seu_endereco_ip:/caminho/para/postgres_data.tar.bz2 /caminho/local/para/salvar/o/arquivo/</span></span></code></pre></div><ol start="4">
+<li>Descompactar o arquivo tar</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tar -xjf postgres_data.tar.bz2</span></span></code></pre></div><ol start="5">
+<li>
+<p>Neste passo você tem duas opções:</p>
+<ol>
+<li>Criar um container com o volume descompactado</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d -v /caminho/local/para/postgres_data:/var/lib/postgresql/data -e <span style="color:#eedd82">POSTGRES_PASSWORD</span>=sua_senha -p 5432:5432 postgres</span></span></code></pre></div><ol start="2">
+<li>Ou adicionar o volume diretamente em seu arquivo docker compose:</li>
+</ol>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>volumes:
+</span></span><span style="display:flex;"><span>  - /caminho/local/para/postgres_data:/var/lib/postgresql/data</span></span></code></pre></div></li>
+</ol>
 
             <footer class="footline">
 

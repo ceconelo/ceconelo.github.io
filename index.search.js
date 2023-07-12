@@ -35,6 +35,13 @@ var relearn_search_index = [
     "uri": "/docker/index.html"
   },
   {
+    "content": "Contexto Um cliente pediu para eu fazer um teste em uma aplicação que estava rodando em um droplet da Digital Ocean. O teste era simples, mas seguindo boas práticas não iria fazer isso direto no servidor de produção dele. Então o que fiz foi subir um container com a aplicação dele localmente.\nAbaixo vou deixar o passo a passo que realizei para trazer o banco de dados para o meu ambiente local.\nBanco de dados utilizado: PostgreSQL\nPasso a passo Conectar-se ao servidor DigitalOcean ssh root@\u003cip do servidor\u003e Note Certifique-se de substituir “ip do servidor” pelo endereço IP real do seu servidor.\nCriar um arquivo tar do volume Docker docker run --rm -v postgres_data:/volume -v $(pwd):/backup alpine tar -cjf /backup/postgres_data.tar.bz2 -C /volume .Isso criará um arquivo chamado “postgres_data.tar.bz2” no diretório atual dentro do servidor DigitalOcean. Note Certifique-se de substituir “postgres_data” pelo nome do volume que você deseja fazer backup.\nCopiar o arquivo tar para o seu computador local scp root@seu_endereco_ip:/caminho/para/postgres_data.tar.bz2 /caminho/local/para/salvar/o/arquivo/ Descompactar o arquivo tar tar -xjf postgres_data.tar.bz2 Neste passo você tem duas opções:\nCriar um container com o volume descompactado docker run -d -v /caminho/local/para/postgres_data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=sua_senha -p 5432:5432 postgres Ou adicionar o volume diretamente em seu arquivo docker compose: volumes: - /caminho/local/para/postgres_data:/var/lib/postgresql/data ",
+    "description": "",
+    "tags": null,
+    "title": "Backups",
+    "uri": "/docker/backup/index.html"
+  },
+  {
     "content": "start #!/bin/bash # if any of the commands in your code fails for any reason, the entire script fails set -o errexit # fail exit if one of your pipe command fails set -o pipefail # exits if any of your variables is not set set -o nounset uvicorn main:app --reload --reload-dir src --host 0.0.0.0 --workers 1 exec \"$@\" Note No exemplo acima estou passando o modulo main e a variavel app ( main:app ), que é a instancia da classe FastAPI. Lembre-se de alterar isso para o seu projeto.\n",
     "description": "",
     "tags": null,

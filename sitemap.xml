@@ -18,6 +18,9 @@
     <loc>https://sonath.dev.br/docker/index.html</loc>
   </url>
   <url>
+    <loc>https://sonath.dev.br/docker/backup/index.html</loc>
+  </url>
+  <url>
     <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-start/index.html</loc>
   </url>
   <url>
