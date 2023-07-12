@@ -7,9 +7,9 @@
     <meta name="generator" content="Relearn 5.17.1+tip">
     <meta name="description" content="Base de conhecimento de Sonath Developer BR">
     <meta name="author" content="Thiago Oliveira">
-    <title>Sonath - Base de Conhecimento :: Sonath - Wiki</title>
-    <link href="https://sonath.dev.br/index.html" rel="canonical" type="text/html" title="Sonath - Base de Conhecimento :: Sonath - Wiki">
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Sonath - Base de Conhecimento :: Sonath - Wiki">
+    <title>Docker :: Sonath - Wiki</title>
+    <link href="/docker/index.xml" rel="alternate" type="application/rss+xml" title="Docker :: Sonath - Wiki">
+    <link href="/docker/index.print.html" rel="alternate" type="text/html" title="Docker :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1689133585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689133585" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1689133585" rel="stylesheet">
@@ -20,7 +20,6 @@
     <link href="/css/theme-sonath.css?1689133585" rel="stylesheet" id="variant-style">
     <link href="/css/variant.css?1689133585" rel="stylesheet">
     <link href="/css/print.css?1689133585" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1689133585" rel="stylesheet">
     <link href="/css/ie.css?1689133585" rel="stylesheet">
     <script src="/js/url.js?1689133585"></script>
     <script src="/js/variant.js?1689133585"></script>
@@ -42,122 +41,63 @@
       window.variants && variants.init( [ 'sonath' ] );
     </script>
   </head>
-  <body class="mobile-support print disableInlineCopyToClipboard" data-url="/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/docker/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
+          <div class="navigation">
+            <span class="nav nav-next topbar-link"><i class="fa fa-chevron-right fa-fw"></i></span>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev topbar-link" href="/linguagens/python/index.html" title="Python (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/docker/index.print.html">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/docker/_index.md" target="_blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Sonath - Base de Conhecimento</span><meta itemprop="position" content="1"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Docker</span><meta itemprop="position" content="2"></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#básico-de-docker">Básico de Docker</a>
+      <ul>
+        <li><a href="#o-que-é-docker">O que é Docker</a></li>
+        <li><a href="#arquitetura-de-um-container">Arquitetura de um container</a>
+          <ul>
+            <li><a href="#filesystem">Filesystem</a></li>
+            <li><a href="#namespaces">Namespaces</a></li>
+            <li><a href="#cgroups">Cgroups</a></li>
+          </ul>
+        </li>
+        <li><a href="#visão-geral">Visão geral</a></li>
+        <li><a href="#instalação-ubuntu">Instalação (Ubuntu)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
-      <main id="body-inner" class="highlightable home" tabindex="-1">
+      <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="home">
-            <header class="headline">
-            </header>
-<h1 id="sonath---base-de-conhecimento">Sonath - Base de Conhecimento</h1>
-
-<h2 id="bem-vindo-">Bem vindo !</h2>
-<p>Seja bem vindo ao meu espaço, ou melhor, ao nosso espaço. Sim, foi proposital primeiramente o uso do pronome possessivo meu e depois
-o nosso. Isso porque em um primeiro momento percebi que precisa armazenar o conhecimento que estava adquirindo, servindo como
-uma espécie de diário mas depois percebi que este conhecimento teria um valor ainda maior se fosse compartilhado, e é isso
-que quero fazer aqui.</p>
-<p>Além do mais sei que muitas pessoas tem dificuldades em encontrar conteúdo de qualidade na internet, principalmente em português.
-Então chega mais, sinta-se a vontade e aproveite o conteúdo que estou disponibilizando aqui.</p>
-<p>Quero que fique claro que não me considero o melhor do mundo nos diversos assuntos que vou abordar aqui, mas acredito que
-posso ajudar muitas pessoas com o que sei e com os desafios que já enfrentei e que ainda por vezes enfrento.</p>
-<h2 id="sobre-mim">Sobre mim</h2>
-<p>Meu nome é <strong>Thiago Oliveira</strong>, estudande de Ciência da Computação, apaixonado por tecnologia e pelos desafios que esse mundo
-me proporciona. Atualmente ( 13 anos&hellip;hehe ) tenho uma empresa <a href="http://cditec.com.br/" target="_blank"><strong>Cditec</strong></a> que presta serviços de desenvolvimento de software, consultoria,
-admnistração de redes, segurança da informação e infraestrutura de TI.</p>
-<p>Nos últimos anos tenho me dedicado à projetos que envolvem WebScraping, RPA, Integração de Sistemas e Desenvolvimento de APIs e
-engenharia reversa de sistemas web.</p>
-<p>Neste sentido me envolvi com diversas tecnologias como: Python, Javascript, NodeJS, Docker, Selenium, Puppeteer, Scrapy,
-BeautifulSoup, FastAPI, VueJS, entre outras.</p>
-<h3 id="o-que-você-vai-encontrar-aqui">O que você vai encontrar aqui</h3>
-<p>Como já deve ter percebido me envolvo com diversas tecnologias e assuntos, então aqui você vai encontrar conteúdos sobre:</p>
-<ul>
-<li>WebScraping</li>
-<li>RPA</li>
-<li>Integração de Sistemas</li>
-<li>Desenvolvimento de APIs</li>
-<li>Engenharia Reversa</li>
-<li>Desenvolvimento de Software</li>
-<li>DevOps</li>
-<li>Padrões de Projeto</li>
-<li>Arquitetura de Software</li>
-<li>Segurança da Informação</li>
-<li>Docker</li>
-<li>Linux</li>
-<li>Github</li>
-</ul>
-<p>Como mencionei anteriormente, uso este espaço como um diário, isso significa que se as coisas por aqui estiverem muito bagunçadas
-é porque estou aprendendo e ainda não tive tempo de organizar tudo. Mas não se preocupe, com o tempo tudo vai ficar mais
-organizado e com mais conteúdo.</p>
-<p>Caso tenha alguma dúvida, sugestão ou crítica, fique a vontade para entrar em contato comigo através do meu
-<a href="https://www.linkedin.com/in/thiagoceconelo/" target="_blank"><strong>Linkedin</strong></a></p>
-
-            <footer class="footline">
-
-            </footer>
-          </article>
-
-          <section>
-            <h1 class="a11y-only">Subsections of Sonath - Base de Conhecimento</h1>
-          <article class="default">
-            <header class="headline">
-            </header>
-<h1 id="linguagens">Linguagens</h1>
-
-
-<ul class="children children-li children-sort-">
-	
-<li><a href="/linguagens/javascript/index.html">Javascript</a><ul>
-	</ul></li>
-<li><a href="/linguagens/python/index.html">Python</a><ul>
-	</ul></li>
-</ul>
-
-            <footer class="footline">
-
-            </footer>
-          </article>
-
-          <section>
-            <h1 class="a11y-only">Subsections of Linguagens</h1>
-          <article class="default">
-            <header class="headline">
-            </header>
-<h1 id="javascript">Javascript</h1>
-
-<p>Lorem Ipsum.</p>
-
-            <footer class="footline">
-
-            </footer>
-          </article>
-
-          <article class="default">
-            <header class="headline">
-            </header>
-<h1 id="python">Python</h1>
-
-<p>Lorem Ipsum.</p>
-
-            <footer class="footline">
-
-            </footer>
-          </article>
-
-          </section>
           <article class="default">
             <header class="headline">
             </header>
@@ -230,11 +170,75 @@ não pode ser alterada e que toda escrita é feita em uma camada temporária que
 
             </footer>
           </article>
-
-          </section>
         </div>
       </main>
     </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+
+        </div>
+        <form action="/search.html" method="get"><div class="searchbox default-animation">
+          <button type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div></form>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1689133585" defer></script>
+        <script src="/js/lunr/lunr.min.js?1689133585" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1689133585" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1689133585" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1689133585" defer></script>
+        <script src="/js/search.js?1689133585" defer></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics enlarge morespace collapsible-menu">
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html">Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/linguagens/python/index.html" class=""><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/docker/index.html" class="active"><a class="padding" href="/docker/index.html">Docker<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="sonath" value="sonath" selected>Sonath</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i><span>&nbsp;</span>Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><p style="font-size: 0.95rem;">Made with ❤️ by <a href="https://www.linkedin.com/in/thiagoceconelo/">Thiago Oliveira</a></p>
+
+        </div>
+      </div>
+    </aside>
     <script src="/js/clipboard.min.js?1689133585" defer></script>
     <script src="/js/perfect-scrollbar.min.js?1689133585" defer></script>
     <script src="/js/theme.js?1689133585" defer></script>
