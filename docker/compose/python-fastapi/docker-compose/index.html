@@ -7,9 +7,9 @@
     <meta name="generator" content="Relearn 5.17.1+tip">
     <meta name="description" content="Base de conhecimento de Sonath Developer BR">
     <meta name="author" content="Thiago Oliveira">
-    <title>Python :: Sonath - Wiki</title>
-    <link href="/linguagens/python/index.xml" rel="alternate" type="application/rss+xml" title="Python :: Sonath - Wiki">
-    <link href="/linguagens/python/index.print.html" rel="alternate" type="text/html" title="Python :: Sonath - Wiki">
+    <title>Docker Compose :: Sonath - Wiki</title>
+    <link href="/docker/compose/python-fastapi/docker-compose/index.xml" rel="alternate" type="application/rss+xml" title="Docker Compose :: Sonath - Wiki">
+    <link href="/docker/compose/python-fastapi/docker-compose/index.print.html" rel="alternate" type="text/html" title="Docker Compose :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1689180303" rel="stylesheet">
@@ -41,25 +41,25 @@
       window.variants && variants.init( [ 'sonath' ] );
     </script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/linguagens/python/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/docker/compose/python-fastapi/docker-compose/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-            <a class="nav nav-next topbar-link" href="/linguagens/python/teste/index.html" title="Teste (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <span class="nav nav-next topbar-link"><i class="fa fa-chevron-right fa-fw"></i></span>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev topbar-link" href="/linguagens/index.html" title="Linguagens (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev topbar-link" href="/docker/compose/python-fastapi/dev-wait-for-it/index.html" title="Dev/wait-for-it (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-print-link">
-            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/linguagens/python/index.print.html">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/docker/compose/python-fastapi/docker-compose/index.print.html">
               <i class="fas fa-print fa-fw"></i>
             </a>
           </div>
           <div id="top-github-link">
-            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/linguagens/python/_index.md" target="_blank">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/docker/compose/python-fastapi/docker-compose.md" target="_blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
@@ -67,11 +67,26 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/linguagens/index.html"><span itemprop="name">Linguagens</span></a><meta itemprop="position" content="2"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Python</span><meta itemprop="position" content="3"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/index.html"><span itemprop="name">Docker</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/index.html"><span itemprop="name">Compose</span></a><meta itemprop="position" content="3"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/docker/compose/python-fastapi/index.html"><span itemprop="name">Python-FastAPI</span></a><meta itemprop="position" content="4"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Docker Compose</span><meta itemprop="position" content="5"></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-composeyml">docker-compose.yml</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -80,10 +95,27 @@
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="python">Python</h1>
+<h1 id="docker-compose">Docker Compose</h1>
 
-<p>Lorem Ipsum.</p>
-
+<h3 id="docker-composeyml">docker-compose.yml</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>version: <span style="color:#87ceeb">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  app:
+</span></span><span style="display:flex;"><span>    build:
+</span></span><span style="display:flex;"><span>      context: .
+</span></span><span style="display:flex;"><span>      dockerfile: ./.docker/dev/Dockerfile
+</span></span><span style="display:flex;"><span>    command:
+</span></span><span style="display:flex;"><span>      - /start
+</span></span><span style="display:flex;"><span>    container_name: python-fastapi
+</span></span><span style="display:flex;"><span>    env_file:
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/.env
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f60">8000</span>:<span style="color:#f60">8000</span>
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - .:/home/python/app
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/zsh/.p10k.zsh:/home/python/.p10k.zsh:delegated
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/zsh/history:/home/python/zsh:delegated
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
             <footer class="footline">
 
             </footer>
@@ -114,18 +146,18 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics enlarge morespace collapsible-menu">
-          <li data-nav-id="/linguagens/index.html" class="parent "><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53" checked><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
-          <li data-nav-id="/linguagens/python/index.html" class="active parent alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/index.html" class="alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
           <li data-nav-id="/linguagens/python/teste/index.html" class=""><a class="padding" href="/linguagens/python/teste/index.html">Teste<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docker/index.html" class=""><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0"><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
-          <li data-nav-id="/docker/compose/index.html" class="alwaysopen"><input type="checkbox" id="section-49e713816928b075d1c87851fb4ac762" aria-controls="subsections-49e713816928b075d1c87851fb4ac762" checked><label for="section-49e713816928b075d1c87851fb4ac762"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Compose</span></label><a class="padding" href="/docker/compose/index.html">Compose<i class="fas fa-check read-icon"></i></a><ul id="subsections-49e713816928b075d1c87851fb4ac762" class="morespace collapsible-menu">
-          <li data-nav-id="/docker/compose/python-fastapi/index.html" class="alwaysopen"><input type="checkbox" id="section-b57fd44a68c7a41a570050d6dfa81a21" aria-controls="subsections-b57fd44a68c7a41a570050d6dfa81a21" checked><label for="section-b57fd44a68c7a41a570050d6dfa81a21"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python-FastAPI</span></label><a class="padding" href="/docker/compose/python-fastapi/index.html">Python-FastAPI<i class="fas fa-check read-icon"></i></a><ul id="subsections-b57fd44a68c7a41a570050d6dfa81a21" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/index.html" class="parent "><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0" checked><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/index.html" class="parent alwaysopen"><input type="checkbox" id="section-49e713816928b075d1c87851fb4ac762" aria-controls="subsections-49e713816928b075d1c87851fb4ac762" checked><label for="section-49e713816928b075d1c87851fb4ac762"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Compose</span></label><a class="padding" href="/docker/compose/index.html">Compose<i class="fas fa-check read-icon"></i></a><ul id="subsections-49e713816928b075d1c87851fb4ac762" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/python-fastapi/index.html" class="parent alwaysopen"><input type="checkbox" id="section-b57fd44a68c7a41a570050d6dfa81a21" aria-controls="subsections-b57fd44a68c7a41a570050d6dfa81a21" checked><label for="section-b57fd44a68c7a41a570050d6dfa81a21"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python-FastAPI</span></label><a class="padding" href="/docker/compose/python-fastapi/index.html">Python-FastAPI<i class="fas fa-check read-icon"></i></a><ul id="subsections-b57fd44a68c7a41a570050d6dfa81a21" class="morespace collapsible-menu">
           <li data-nav-id="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html">Dev/Zsh<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/python-fastapi/dev-dockerfile/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-dockerfile/index.html">Dev/dockerfile<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/python-fastapi/dev-start/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-start/index.html">Dev/start<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/python-fastapi/dev-wait-for-it/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-wait-for-it/index.html">Dev/wait-for-it<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/docker/compose/python-fastapi/docker-compose/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/docker-compose/index.html">Docker Compose<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/docker/compose/python-fastapi/docker-compose/index.html" class="active"><a class="padding" href="/docker/compose/python-fastapi/docker-compose/index.html">Docker Compose<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
         </ul>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
         <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">

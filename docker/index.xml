@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://sonath.dev.br/docker/compose/index.html</guid>
       <description>Sobre este capítulo Espaço destinado a documentar os arquivos de criação de containers com o Docker Compose. Você vai ver aqui as configurações que utilizo em meu dia a dia.
-Python-FastAPI Dev/Zsh Dev/dockerfile Dev/start Dev/wait-for-it </description>
+Comandos úteis - Iniciar containers docker compose -f docker-compose.yml up -d-d: Rodar em background (detached) -f: Arquivo compose de configuração - Iniciar containers com build docker compose -f docker-compose.yml up -d --build--build: Rebuildar a imagem - Parar, iniciar e restart um container docker compose -f docker-compose.</description>
     </item>
   </channel>
 </rss>

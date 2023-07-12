@@ -11,19 +11,19 @@
     <link href="https://sonath.dev.br/index.html" rel="canonical" type="text/html" title="Sonath - Base de Conhecimento :: Sonath - Wiki">
     <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Sonath - Base de Conhecimento :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689136943" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1689136943" rel="stylesheet">
-    <link href="/css/auto-complete.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689136943" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1689136943" rel="stylesheet">
-    <link href="/css/fonts.css?1689136943" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689136943" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1689136943" rel="stylesheet">
-    <link href="/css/theme-sonath.css?1689136943" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1689136943" rel="stylesheet">
-    <link href="/css/print.css?1689136943" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1689136943" rel="stylesheet">
-    <link href="/css/ie.css?1689136943" rel="stylesheet">
-    <script src="/js/url.js?1689136943"></script>
-    <script src="/js/variant.js?1689136943"></script>
+    <link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689180303" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1689180303" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689180303" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1689180303" rel="stylesheet">
+    <link href="/css/fonts.css?1689180303" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689180303" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1689180303" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1689180303" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1689180303" rel="stylesheet">
+    <link href="/css/print.css?1689180303" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1689180303" rel="stylesheet">
+    <link href="/css/ie.css?1689180303" rel="stylesheet">
+    <script src="/js/url.js?1689180303"></script>
+    <script src="/js/variant.js?1689180303"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -270,20 +270,20 @@ isolado.</p>
 <p>Cgroups são grupos de controle, que permitem limitar e isolar recursos de um processo.</p>
 <p>Os containers são criados a partir de imagens montadas em camadas, que são armazenadas em um repositório chamado Docker Registry.</p>
 <p>
-<a href="#image-a628b9e2caf47a6ff639b190d6edd9da" class="lightbox-link">
+<a href="#image-cff23bb2e3475617a21c6af2c71e0486" class="lightbox-link">
 <img src="/images/docker/layers.png" alt="docker-layers" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-a628b9e2caf47a6ff639b190d6edd9da">
+<a href="javascript:history.back();" class="lightbox" id="image-cff23bb2e3475617a21c6af2c71e0486">
 <img src="/images/docker/layers.png" alt="docker-layers" class="lightbox-image" loading="lazy">
 </a></p>
 <p>Outra informação bem relevante é que as camadas mantém um estado imutável, ou seja, uma vez criada uma camada ela
 não pode ser alterada e que toda escrita é feita em uma camada temporária que é descartada quando o container é desligado.</p>
 <h3 id="visão-geral">Visão geral</h3>
 <p>
-<a href="#image-20d87b42a06346e69583420d51eaf54b" class="lightbox-link">
+<a href="#image-ca2de1b41053c45964da7a3d3619a9de" class="lightbox-link">
 <img src="/images/docker/big-picture.png" alt="docker-big-picture" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-20d87b42a06346e69583420d51eaf54b">
+<a href="javascript:history.back();" class="lightbox" id="image-ca2de1b41053c45964da7a3d3619a9de">
 <img src="/images/docker/big-picture.png" alt="docker-big-picture" class="lightbox-image" loading="lazy">
 </a></p>
 <p>Essa é uma visão geral sobre o docker. Para uma visão mais detalhada acesse o
@@ -326,6 +326,19 @@ não pode ser alterada e que toda escrita é feita em uma camada temporária que
 <h2 id="sobre-este-capítulo">Sobre este capítulo</h2>
 <p>Espaço destinado a documentar os arquivos de criação de containers com o Docker Compose.
 Você vai ver aqui as configurações que utilizo em meu dia a dia.</p>
+<h2 id="comandos-úteis">Comandos úteis</h2>
+<h6 id="--iniciar-containers">- Iniciar containers</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml up -d</span></span></code></pre></div><p><code>-d: Rodar em background (detached) -f: Arquivo compose de configuração </code></p>
+<h6 id="--iniciar-containers-com-build">- Iniciar containers com build</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml up -d --build</span></span></code></pre></div><p><code>--build: Rebuildar a imagem </code></p>
+<h6 id="--parar-iniciar-e-restart-um-container">- Parar, iniciar e restart um container</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml stop
+</span></span><span style="display:flex;"><span>docker compose -f docker-compose.yml start
+</span></span><span style="display:flex;"><span>docker compose -f docker-compose.yml restart</span></span></code></pre></div><h6 id="--listar-containers-em-execução">- Listar containers em execução</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml ps</span></span></code></pre></div><h6 id="--remover-containers">- Remover containers</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml down</span></span></code></pre></div><h6 id="--conectar-em-um-container">- Conectar em um container</h6>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker compose -f docker-compose.yml exec &lt;nome <span style="color:#f00">do</span> container&gt; &lt;nome <span style="color:#f00">do</span> processo&gt;</span></span></code></pre></div><p><code>&lt;nome do processo&gt;: bash, sh, zsh, etc... </code></p>
+<h2 id="meus-arquivos-de-configuração">Meus arquivos de configuração</h2>
 
 <ul class="children children-li children-sort-">
 	
@@ -338,6 +351,8 @@ Você vai ver aqui as configurações que utilizo em meu dia a dia.</p>
 <li><a href="/docker/compose/python-fastapi/dev-start/index.html">Dev/start</a><ul>
 	</ul></li>
 <li><a href="/docker/compose/python-fastapi/dev-wait-for-it/index.html">Dev/wait-for-it</a><ul>
+	</ul></li>
+<li><a href="/docker/compose/python-fastapi/docker-compose/index.html">Docker Compose</a><ul>
 	</ul></li></ul></li>
 </ul>
 
@@ -2109,12 +2124,18 @@ Você vai ver aqui as configurações que utilizo em meu dia a dia.</p>
 </span></span><span style="display:flex;"><span><span style="color:#0f0"># exits if any of your variables is not set</span>
 </span></span><span style="display:flex;"><span>set -o nounset
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0f0">#python app.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#0f0">#tail -f /dev/null</span>
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>uvicorn main:app --reload --reload-dir src --host 0.0.0.0 --workers <span style="color:#f60">1</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>exec <span style="color:#87ceeb">&#34;</span><span style="color:#eedd82">$@</span><span style="color:#87ceeb">&#34;</span></span></span></code></pre></div>
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>No exemplo acima estou passando o modulo main e a variavel app ( <code>main:app</code> ), que é a instancia da classe FastAPI.
+Lembre-se de alterar isso para o seu projeto.</p>
+</div>
+</div>
+
             <footer class="footline">
 
             </footer>
@@ -2313,6 +2334,35 @@ Você vai ver aqui as configurações que utilizo em meu dia a dia.</p>
             </footer>
           </article>
 
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="docker-compose">Docker Compose</h1>
+
+<h3 id="docker-composeyml">docker-compose.yml</h3>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>version: <span style="color:#87ceeb">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  app:
+</span></span><span style="display:flex;"><span>    build:
+</span></span><span style="display:flex;"><span>      context: .
+</span></span><span style="display:flex;"><span>      dockerfile: ./.docker/dev/Dockerfile
+</span></span><span style="display:flex;"><span>    command:
+</span></span><span style="display:flex;"><span>      - /start
+</span></span><span style="display:flex;"><span>    container_name: python-fastapi
+</span></span><span style="display:flex;"><span>    env_file:
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/.env
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f60">8000</span>:<span style="color:#f60">8000</span>
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - .:/home/python/app
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/zsh/.p10k.zsh:/home/python/.p10k.zsh:delegated
+</span></span><span style="display:flex;"><span>      - ./.docker/dev/zsh/history:/home/python/zsh:delegated
+</span></span><span style="display:flex;"><span>    </span></span></code></pre></div>
+            <footer class="footline">
+
+            </footer>
+          </article>
+
           </section>
           </section>
           </section>
@@ -2320,8 +2370,8 @@ Você vai ver aqui as configurações que utilizo em meu dia a dia.</p>
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1689136943" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1689136943" defer></script>
-    <script src="/js/theme.js?1689136943" defer></script>
+    <script src="/js/clipboard.min.js?1689180303" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1689180303" defer></script>
+    <script src="/js/theme.js?1689180303" defer></script>
   </body>
 </html>

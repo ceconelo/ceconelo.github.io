@@ -35,7 +35,7 @@ var relearn_search_index = [
     "uri": "/docker/index.html"
   },
   {
-    "content": "start #!/bin/bash # if any of the commands in your code fails for any reason, the entire script fails set -o errexit # fail exit if one of your pipe command fails set -o pipefail # exits if any of your variables is not set set -o nounset #python app.py #tail -f /dev/null uvicorn main:app --reload --reload-dir src --host 0.0.0.0 --workers 1 exec \"$@\"",
+    "content": "start #!/bin/bash # if any of the commands in your code fails for any reason, the entire script fails set -o errexit # fail exit if one of your pipe command fails set -o pipefail # exits if any of your variables is not set set -o nounset uvicorn main:app --reload --reload-dir src --host 0.0.0.0 --workers 1 exec \"$@\" Note No exemplo acima estou passando o modulo main e a variavel app ( main:app ), que é a instancia da classe FastAPI. Lembre-se de alterar isso para o seu projeto.\n",
     "description": "",
     "tags": null,
     "title": "Dev/start",
@@ -47,6 +47,13 @@ var relearn_search_index = [
     "tags": null,
     "title": "Dev/wait-for-it",
     "uri": "/docker/compose/python-fastapi/dev-wait-for-it/index.html"
+  },
+  {
+    "content": "docker-compose.yml version: '3' services: app: build: context: . dockerfile: ./.docker/dev/Dockerfile command: - /start container_name: python-fastapi env_file: - ./.docker/dev/.env ports: - 8000:8000 volumes: - .:/home/python/app - ./.docker/dev/zsh/.p10k.zsh:/home/python/.p10k.zsh:delegated - ./.docker/dev/zsh/history:/home/python/zsh:delegated ",
+    "description": "",
+    "tags": null,
+    "title": "Docker Compose",
+    "uri": "/docker/compose/python-fastapi/docker-compose/index.html"
   },
   {
     "content": "Lorem Ipsum.\n",
@@ -70,7 +77,7 @@ var relearn_search_index = [
     "uri": "/categories/index.html"
   },
   {
-    "content": "Sobre este capítulo Espaço destinado a documentar os arquivos de criação de containers com o Docker Compose. Você vai ver aqui as configurações que utilizo em meu dia a dia.\nPython-FastAPI Dev/Zsh Dev/dockerfile Dev/start Dev/wait-for-it ",
+    "content": "Sobre este capítulo Espaço destinado a documentar os arquivos de criação de containers com o Docker Compose. Você vai ver aqui as configurações que utilizo em meu dia a dia.\nComandos úteis - Iniciar containers docker compose -f docker-compose.yml up -d-d: Rodar em background (detached) -f: Arquivo compose de configuração - Iniciar containers com build docker compose -f docker-compose.yml up -d --build--build: Rebuildar a imagem - Parar, iniciar e restart um container docker compose -f docker-compose.yml stop docker compose -f docker-compose.yml start docker compose -f docker-compose.yml restart- Listar containers em execução docker compose -f docker-compose.yml ps- Remover containers docker compose -f docker-compose.yml down- Conectar em um container docker compose -f docker-compose.yml exec \u003cnome do container\u003e \u003cnome do processo\u003e\u003cnome do processo\u003e: bash, sh, zsh, etc... Meus arquivos de configuração Python-FastAPI Dev/Zsh Dev/dockerfile Dev/start Dev/wait-for-it Docker Compose ",
     "description": "",
     "tags": null,
     "title": "Compose",
