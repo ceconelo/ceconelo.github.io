@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev. de Software on Sonath - Wiki</title>
+    <link>https://sonath.dev.br/desenvolvimento-software/index.html</link>
+    <description>Recent content in Dev. de Software on Sonath - Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language><atom:link href="https://sonath.dev.br/desenvolvimento-software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Domain Driven Design</title>
+      <link>https://sonath.dev.br/desenvolvimento-software/domain-driven-design/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/desenvolvimento-software/domain-driven-design/index.html</guid>
+      <description>O que é DDD? O domain driven design é uma abordagem, ou melhor dizendo, uma filosofia que vai manter você focado no domínio do problema que está tentando resolver, e não nas tecnologias que você vai utilizar para resolver esse problema.
+Estamos acostumados a pensar em desenvolvimento de software como uma atividade única e exclusivamente técnica, e por diversas vezes a primeira coisa que fazemos é pegar nossa linguagem preferida, e a partir da concepção do banco de dados começar a criação do software, mas perceba, temos o problema sendo concentrado em dados e não no domínio.</description>
+    </item>
+  </channel>
+</rss>

@@ -21,6 +21,9 @@
     <loc>https://sonath.dev.br/docker/backup/index.html</loc>
   </url>
   <url>
+    <loc>https://sonath.dev.br/desenvolvimento-software/index.html</loc>
+  </url>
+  <url>
     <loc>https://sonath.dev.br/docker/compose/python-fastapi/dev-start/index.html</loc>
   </url>
   <url>
@@ -42,6 +45,9 @@
   </url>
   <url>
     <loc>https://sonath.dev.br/docker/compose/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sonath.dev.br/desenvolvimento-software/domain-driven-design/index.html</loc>
   </url>
   <url>
     <loc>https://sonath.dev.br/linguagens/javascript/index.html</loc>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.115.2">
+    <meta name="generator" content="Relearn 5.17.1+tip">
+    <meta name="description" content="Base de conhecimento de Sonath Developer BR">
+    <meta name="author" content="Thiago Oliveira">
+    <title>Domain Driven Design :: Sonath - Wiki</title>
+    <link href="/desenvolvimento-software/domain-driven-design/index.xml" rel="alternate" type="application/rss+xml" title="Domain Driven Design :: Sonath - Wiki">
+    <link href="/desenvolvimento-software/domain-driven-design/index.print.html" rel="alternate" type="text/html" title="Domain Driven Design :: Sonath - Wiki">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1689275924" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689275924" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1689275924" rel="stylesheet">
+    <link href="/css/auto-complete.css?1689275924" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1689275924" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1689275924" rel="stylesheet">
+    <link href="/css/fonts.css?1689275924" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1689275924" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1689275924" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1689275924" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1689275924" rel="stylesheet">
+    <link href="/css/print.css?1689275924" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1689275924" rel="stylesheet">
+    <script src="/js/url.js?1689275924"></script>
+    <script src="/js/variant.js?1689275924"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='https:\/\/sonath.dev.br/';
+      window.variants && variants.init( [ 'sonath' ] );
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/desenvolvimento-software/domain-driven-design/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+            <span class="nav nav-next topbar-link"><i class="fa fa-chevron-right fa-fw"></i></span>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev topbar-link" href="/desenvolvimento-software/index.html" title="Dev. de Software (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-print-link">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/desenvolvimento-software/domain-driven-design/index.print.html">
+              <i class="fas fa-print fa-fw"></i>
+            </a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/desenvolvimento-software/domain-driven-design/_index.md" target="_blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/desenvolvimento-software/index.html"><span itemprop="name">Dev. de Software</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Domain Driven Design</span><meta itemprop="position" content="3"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#o-que-é-ddd">O que é DDD?</a></li>
+        <li><a href="#atacar-o-software-no-coração-da-aplicação">Atacar o software no coração da aplicação</a></li>
+        <li><a href="#como-o-ddd-pode-me-ajudar">Como o DDD pode me ajudar?</a></li>
+        <li><a href="#domínio-subdomínio-e-contextos-bounded-context">Domínio, Subdomínio e Contextos (Bounded Context)</a>
+          <ul>
+            <li>
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#visão-estratégica">Visão estratégica</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="domain-driven-design">Domain Driven Design</h1>
+
+<h3 id="o-que-é-ddd">O que é DDD?</h3>
+<p>O domain driven design é uma abordagem, ou melhor dizendo, uma filosofia que vai manter você focado no domínio do problema que
+está tentando resolver, e não nas tecnologias que você vai utilizar para resolver esse problema.</p>
+<p>Estamos acostumados a pensar em desenvolvimento de software como uma atividade única e exclusivamente técnica, e por diversas
+vezes a primeira coisa que fazemos é pegar nossa linguagem preferida, e a partir da concepção do banco de dados começar a
+criação do software, mas perceba, temos o problema sendo concentrado em dados e não no domínio.</p>
+<p>Dependendo do domínio e quão complexo ele é, essa abordagem tende em um futuro bem próximo ser um tiro no pé, por vezes
+tornando o software difícil de manter, difícil de escalar e difícil de evoluir.</p>
+<p>Mas afinal o que de fato é DDD?</p>
+<h3 id="atacar-o-software-no-coração-da-aplicação">Atacar o software no coração da aplicação</h3>
+<p>A grande proposta do DDD é promover uma mudança de paradigma no desenvolvimento de software, principalmente em sua fase
+de concepção.</p>
+<p>Quando estamos falando de DDD estamos falando de conceitos e não de código. Estamos falando na criação de um software guiado pelo
+domínio do negócio, aliás o próprio nome já diz isso, Domain Driven Design, ou seja, Design guiado pelo domínio.</p>
+<p>Como o próprio Eric Evans, criador do DDD, diz em seu livro:</p>
+<blockquote>
+<p>O objetivo do DDD é criar um modelo de domínio rico e expressivo que capture as complexidades do negócio e que seja
+refletido no código do software.&quot;</p>
+</blockquote>
+<p>Em suas palavras fica evidente a existência de uma separação entre o domínio do negócio e o código do software, em outras
+palavras, <code>complexidade do négocio e complexidade de software.</code></p>
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+
+<p>Iniciar o desenvolvimento atacando a complexidade do negócio, buscando a compreensão plena do problema que se quer
+resolver, limitando o escopo desse problema e definindo uma linguagem ubíqua que seja compreendida por todos os envolvidos
+no projeto, é o primeiro passo para o sucesso de um projeto.</p>
+</div>
+</div>
+<p>Ainda sobre essa separação grande parte do complexidade de um software não vem da tecnologia, mas sim da comunicação,
+separação de contextos e do entendimento pleno do negócio analisado por vários ângulos.</p>
+<h3 id="como-o-ddd-pode-me-ajudar">Como o DDD pode me ajudar?</h3>
+<p>Em primeiro lugar vale deixar claro que DDD vai entregar grande valor para projetos de softwares complexos.</p>
+<p>Grandes projetos de software envolvem muitas áreas, muitas pessoas, muitas regras de negócio e em muitos
+contextos diferentes, e é justamente nesse cenário que o DDD vai te ajudar a manter o foco no que realmente importa, o negócio.</p>
+<p>Dito isso, o DDD vai te ajudar a:</p>
+<ul>
+<li>Entender com profundidade o domínio e subdomínios do negócio</li>
+<li>Criar uma linguagem ubíqua que seja compreendida por todos os envolvidos no projeto</li>
+<li>Criar um design estratégico utilizando os conceitos de bounded context, context map e subdomínios</li>
+<li>Criar um design tático utilizando os conceitos de entidades, agregados, objetos de valor e serviços de domínio</li>
+<li>Clareza no que diz respeito a complexidade do negócio e complexidade de software</li>
+</ul>
+<h3 id="domínio-subdomínio-e-contextos-bounded-context">Domínio, Subdomínio e Contextos (Bounded Context)</h3>
+<h6 id="domínio-vs-subdomínio">Domínio vs Subdomínio</h6>
+<p>Podemos dizer que o domínio é o core do negócio, é o coração da aplicação, é o que realmente importa, é o que gera valor
+para o negócio e subdomínios são pequenas partes dentro do domínio que dão suporte ao domínio principal, onde cada uma delas
+tem seu grau de importância.</p>
+<p>A figura abaixo ilustra bem essa relação:
+
+<a href="#image-fc2dd26ae209c7dcb5e79d19a16acd53" class="lightbox-link">
+<img src="/images/ddd/domain-vs-subdomain.png" alt="domain-vs-subdomain" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-fc2dd26ae209c7dcb5e79d19a16acd53">
+<img src="/images/ddd/domain-vs-subdomain.png" alt="domain-vs-subdomain" class="lightbox-image" loading="lazy">
+</a></p>
+<p>É importante destacar que a exploração do domínio pode levar tempo e requer uma abordagem iterativa. A
+medida que você aprofunda seu conhecimento e compreensão, você é capaz de identificar as partes cruciais do domínio,
+capturar regras de negócio e entender os desafios específicos de cada subdomínio.</p>
+<p>Aqui nesta fase Eric Evans deixa claro a necessidade do uso de uma linguagem ubíqua, ou seja, uma linguagem que seja
+compreendida pela equipe tecnica e pelos especialistas do negócio e é essa linguagem  que deve ser utilizada em todo o
+projeto e inclusive ser refletida no código.</p>
+<p>Se o especialista do domínio chama um determinado conceito de uma forma, então esse conceito deve ser representado no
+código da mesma forma.</p>
+<h6 id="espaço-do-problema--vs-espaço-da-solução">Espaço do problema  vs Espaço da solução</h6>
+<p>
+<a href="#image-57e862b2b2033e68f7b737a2858c1fae" class="lightbox-link">
+<img src="/images/ddd/problem-vs-solution.png" alt="problem-vs-solution" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-57e862b2b2033e68f7b737a2858c1fae">
+<img src="/images/ddd/problem-vs-solution.png" alt="problem-vs-solution" class="lightbox-image" loading="lazy">
+</a></p>
+<p>Espaço do problema é o espaço onde o domínio do negócio é explorado, onde as regras de negócio são capturadas e onde a
+linguagem ubíqua é criada.</p>
+<p>Espaço da solução é o espaço onde o domínio é implementado, onde o código é escrito e onde a linguagem ubíqua é refletida.</p>
+<p>Em conjunto essas duas áreas formam o que Eric Evans chama de Bounded Context, ou seja, um contexto delimitado, onde
+o domínio é explorado e onde o domínio é implementado, ou seja, subprodutos são criados.</p>
+<h6 id="bounded-context">Bounded Context</h6>
+<p>Em um sistema complexo, diferentes partes do negócio podem ter conceitos, terminologias e regras diferentes.
+Essas diferenças podem levar a ambiguidades e conflitos se não forem tratadas adequadamente e é aqui que os Bounded Contexts
+entram em cena.</p>
+<p>Em poucas palavras podemos dizer que um Bounded Context deixa claro quais são os limites para determinado subdomínio e
+a linguagem comum usada dentro desse contexto confirma se realmente estamos dentro de um contexto delimitado.</p>
+<p>Um contexto sempre vai nos mostrar qual área da empresa e qual problema estamos resolvendo.</p>
+<p>A figura abaixo ilustra bem esse conceito:</p>
+<p>
+<a href="#image-8eee56c108e0358b16af558a0cbcc05d" class="lightbox-link">
+<img src="/images/ddd/bounded-context.png" alt="bounded-context" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-8eee56c108e0358b16af558a0cbcc05d">
+<img src="/images/ddd/bounded-context.png" alt="bounded-context" class="lightbox-image" loading="lazy">
+</a></p>
+<p>A seta que liga os dois subdomínios expressa que Bounded Contexts podem interagir uns com os outros,
+estabelecendo comunicação por meio de interfaces bem definidas. Isso permite que diferentes partes do sistema sejam
+independentes em termos de desenvolvimento, evolução e manutenção.</p>
+<p>Conseguiu imaginar como seria manter e evoluir um sistema que lida com uma única entidade para representar um cliente em
+contextos diferentes?</p>
+<p>Em resumo, Bounded Contexts são unidades de delimitação no DDD que definem fronteiras lógicas em um sistema de software,
+permitindo a criação de modelos de domínio/subdomínio específicos e <code>coesos</code>.</p>
+<h3 id="visão-estratégica">Visão estratégica</h3>
+<p>Para finalizar esse breve resumo sobre DDD, vamos falar sobre visão estratégica.
+Podemos definir visão estratégica como a visão macro do projeto, ou seja, a visão que vai nos mostrar como o projeto
+vai se comportar como um todo.</p>
+<p>A figura abaixo ilustra bem essa visão macro:</p>
+<p>
+<a href="#image-d3cb9565f5b08f442b72901d73698679" class="lightbox-link">
+<img src="/images/ddd/strategic-picture.png" alt="strategic-picture" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-d3cb9565f5b08f442b72901d73698679">
+<img src="/images/ddd/strategic-picture.png" alt="strategic-picture" class="lightbox-image" loading="lazy">
+</a></p>
+<p>Esta figura nos mostra o conceito de Context Map, que é um diagrama ou uma representação visual que ilustra como os
+Bounded Contexts se relacionam uns com os outros. Ele ajuda a documentar e comunicar a visão geral do sistema,
+destacando os limites entre os contextos e as estratégias de comunicação entre eles.</p>
+<p>A principal finalidade do Context Map é fornecer uma visão clara das integrações, alinhamentos e colaborações entre os
+Bounded Contexts, a fim de evitar conflitos e ambiguidades na implementação do software.</p>
+<p>Em resumo o que podemos inferir da imagem acima é que:</p>
+<ul>
+<li>O domínio possuí 4 contextos (Core business -&gt; Vendas de ingressos online)</li>
+<li>Fica fácil definir os times e as responsabilidades de cada um</li>
+<li>U (upstream) -&gt; Vai ditar as regras de como as coisas vão funcionar no momentos da implementação</li>
+<li>D (downstream) -&gt; Vai se adaptar as regras elaboradas pelo U</li>
+<li>Conformista -&gt; Vai ter que conformar e usar da forma como foi criada (Quanto mais conformista, mais amarado você vai ficar)</li>
+<li>ACL (Anti-Corruption Layer) -&gt; Funciona como um adaptador, pois no exemplo acima onde estamos em uma relação conformista
+com o gateway de pagamento, se um dia precisarmos trocar o gateway alteramos somento o código da camada de ACL.</li>
+</ul>
+<h3 id="disclaimer">Disclaimer</h3>
+<p>Parte desse resumo incluindo as imagens usadas vieram do módulo de DDD do curso <a href="https://fullcycle.com.br/" target="_blank">Fullcycle</a>,
+que por sinal é um excelente curso e que eu recomendo fortemente se sente que precisa elevar o seu nível de conhecimento
+em microserviços.</p>
+<p>É isso, espero que tenha gostado e até a próxima!</p>
+
+            <footer class="footline">
+
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+
+        </div>
+        <form action="/search.html" method="get"><div class="searchbox default-animation">
+          <button type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div></form>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1689275924" defer></script>
+        <script src="/js/lunr/lunr.min.js?1689275924" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1689275924" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1689275924" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1689275924" defer></script>
+        <script src="/js/search.js?1689275924" defer></script>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics enlarge morespace collapsible-menu">
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/index.html" class="alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/python/teste/index.html" class=""><a class="padding" href="/linguagens/python/teste/index.html">Teste<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/docker/index.html" class=""><input type="checkbox" id="section-138bddd2d1dc51245528eafa51e353d0" aria-controls="subsections-138bddd2d1dc51245528eafa51e353d0"><label for="section-138bddd2d1dc51245528eafa51e353d0"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker</span></label><a class="padding" href="/docker/index.html"><b>002 </b>Docker<i class="fas fa-check read-icon"></i></a><ul id="subsections-138bddd2d1dc51245528eafa51e353d0" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/backup/index.html" class=""><a class="padding" href="/docker/backup/index.html">Backups<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/index.html" class="alwaysopen"><input type="checkbox" id="section-49e713816928b075d1c87851fb4ac762" aria-controls="subsections-49e713816928b075d1c87851fb4ac762" checked><label for="section-49e713816928b075d1c87851fb4ac762"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Compose</span></label><a class="padding" href="/docker/compose/index.html">Compose<i class="fas fa-check read-icon"></i></a><ul id="subsections-49e713816928b075d1c87851fb4ac762" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/python-fastapi/index.html" class="alwaysopen"><input type="checkbox" id="section-b57fd44a68c7a41a570050d6dfa81a21" aria-controls="subsections-b57fd44a68c7a41a570050d6dfa81a21" checked><label for="section-b57fd44a68c7a41a570050d6dfa81a21"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python-FastAPI</span></label><a class="padding" href="/docker/compose/python-fastapi/index.html">Python-FastAPI<i class="fas fa-check read-icon"></i></a><ul id="subsections-b57fd44a68c7a41a570050d6dfa81a21" class="morespace collapsible-menu">
+          <li data-nav-id="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html">Dev/Zsh<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-dockerfile/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-dockerfile/index.html">Dev/dockerfile<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-start/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-start/index.html">Dev/start<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/dev-wait-for-it/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-wait-for-it/index.html">Dev/wait-for-it<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docker/compose/python-fastapi/docker-compose/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/docker-compose/index.html">Docker Compose<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/desenvolvimento-software/index.html" class="parent "><input type="checkbox" id="section-894194a0916eb2af3113cebfcfa19db8" aria-controls="subsections-894194a0916eb2af3113cebfcfa19db8" checked><label for="section-894194a0916eb2af3113cebfcfa19db8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Dev. de Software</span></label><a class="padding" href="/desenvolvimento-software/index.html"><b>003 </b>Dev. de Software<i class="fas fa-check read-icon"></i></a><ul id="subsections-894194a0916eb2af3113cebfcfa19db8" class="morespace collapsible-menu">
+          <li data-nav-id="/desenvolvimento-software/domain-driven-design/index.html" class="active"><a class="padding" href="/desenvolvimento-software/domain-driven-design/index.html">Domain Driven Design<i class="fas fa-check read-icon"></i></a></li></ul></li>
+        </ul>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="sonath" value="sonath" selected>Sonath</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i><span>&nbsp;</span>Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><p style="font-size: 0.95rem;">Made with ❤️ by <a href="https://www.linkedin.com/in/thiagoceconelo/">Thiago Oliveira</a></p>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1689275924" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1689275924" defer></script>
+    <script src="/js/theme.js?1689275924" defer></script>
+  </body>
+</html>

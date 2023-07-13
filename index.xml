@@ -22,5 +22,14 @@
       <description>Básico de Docker O que é Docker Estamos nos referindo ao nome Docker, pois esse é o nome da empresa que criou a tecnologia que nos permite de forma brilhante criar, gerenciar e executar containers. Mas o que é um container ?
 Um container é uma unidade de software que empacota o código e todas as suas dependências de forma que a aplicação seja executada de forma rápida e confiável de um ambiente de computação isolado.</description>
     </item>
+    <item>
+      <title>Dev. de Software</title>
+      <link>https://sonath.dev.br/desenvolvimento-software/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/desenvolvimento-software/index.html</guid>
+      <description>Muito mais do que simplemente codar e codar e codar, desenvolver software é uma arte que envolve um gama de conhecimentos e habilidades.
+Nesta seção, vamos abordar alguns dos principais conceitos, metodologias, padrões e boas práticas que podem nos ajudar na construção de um software com mais qualidade, mais robusto e mais fácil de manter.
+Como muitos desses conceitos se misturam e se complementam, não há uma ordem específica para a leitura dos posts desta seção.</description>
+    </item>
   </channel>
 </rss>
