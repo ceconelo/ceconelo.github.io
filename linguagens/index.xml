@@ -5,22 +5,21 @@
     <link>https://sonath.dev.br/linguagens/index.html</link>
     <description>Recent content in Linguagens on Sonath - Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Tue, 11 Jul 2023 18:28:37 -0300</lastBuildDate><atom:link href="https://sonath.dev.br/linguagens/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Python</title>
-      <link>https://sonath.dev.br/linguagens/python/index.html</link>
-      <pubDate>Tue, 11 Jul 2023 18:28:37 -0300</pubDate>
-      <guid>https://sonath.dev.br/linguagens/python/index.html</guid>
-      <description>Nessa seção você encontrará conteúdos sobre a linguagem de programação Python, mas não pretendo abordar conteúdos mais básicos principalmente por que já existem muitos materiais sobre isso na internet, então vou focar em conteúdos mais avançados ou que são pouco abordados em outros lugares mas que são muito úteis.
-Caso você tenha chegado aqui sem saber nada de Python, recomendo que você passe em algum dos links abaixo para aprender o básico.</description>
-    </item>
+    <language>pt-br</language><atom:link href="https://sonath.dev.br/linguagens/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Javascript</title>
       <link>https://sonath.dev.br/linguagens/javascript/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://sonath.dev.br/linguagens/javascript/index.html</guid>
       <description>Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://sonath.dev.br/linguagens/python/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/linguagens/python/index.html</guid>
+      <description>Nessa seção você encontrará conteúdos sobre a linguagem de programação Python, mas não pretendo abordar conteúdos mais básicos principalmente por que já existem muitos materiais sobre isso na internet, então vou focar em conteúdos mais avançados ou que são pouco abordados em outros lugares mas que são muito úteis.
+Caso você tenha chegado aqui sem saber nada de Python, recomendo que você passe em algum dos links abaixo para aprender o básico.</description>
     </item>
   </channel>
 </rss>
