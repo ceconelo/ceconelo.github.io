@@ -6,5 +6,14 @@
     <description>Recent content in Domain Driven Design on Sonath - Wiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language><atom:link href="https://sonath.dev.br/desenvolvimento-software/domain-driven-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estrutura de pastas</title>
+      <link>https://sonath.dev.br/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html</guid>
+      <description>A estrutura que sigo compartilhando é a que eu julgo ser a mais simples e eficiente para a maioria dos projetos que eu desenvolvo, isso não significa que seja a melhor ou a pior, apenas que eu gosto assim. Gosto da visão de um sistema modular e nesse sentido cada modulo tem a sua própria estrutura.
+Claro vale lembrar, estou seguindo DDD.
+Overview Como ilustração vamos utilizar um projeto backend com fastapi para você entender como eu estruturo os projetos.</description>
+    </item>
   </channel>
 </rss>

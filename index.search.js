@@ -7,6 +7,13 @@ var relearn_search_index = [
     "uri": "/docker/compose/python-fastapi/dev-zsh-.pk10.zsh/index.html"
   },
   {
+    "content": "A estrutura que sigo compartilhando é a que eu julgo ser a mais simples e eficiente para a maioria dos projetos que eu desenvolvo, isso não significa que seja a melhor ou a pior, apenas que eu gosto assim. Gosto da visão de um sistema modular e nesse sentido cada modulo tem a sua própria estrutura.\nClaro vale lembrar, estou seguindo DDD.\nOverview Como ilustração vamos utilizar um projeto backend com fastapi para você entender como eu estruturo os projetos.\nsrc - Onde fica todo o código fonte do projeto.\ncore - Aqui esta o coração da minha aplicação organizada em módulos.\nfastapi - Aqui fica o código relacionado a tecnologia que estou utilizando (que neste caso é fastapi)\n__seedwork - Aqui fica o código que é compartilhado entre os módulos (Esse é um conceito criado por Martin Fowler)\ntests - Aqui ficam os testes de integração e unitários\nComo exemplo vamos utilizar apenar um módulo para ilustrar ├── src │ ├── core │ │ ├── __seedwork │ │ │ ├── application │ │ │ ├── domain │ │ │ ├── infrastructure │ │ │ ├── tests │ │ ├── products │ │ │ ├── application │ │ │ │ ├── dto.py │ │ │ │ ├── use_cases.py │ │ │ ├── domain │ │ │ │ ├── entities.py │ │ │ │ ├── repositories.py │ │ │ │ ├── validators.py │ │ │ ├── infrastructure │ │ │ │ ├── fastapi │ │ │ ├── tests │ │ │ │ ├── integration │ │ │ │ │ ├── application │ │ │ │ │ ├── domain │ │ │ │ │ ├── infrastructure │ │ │ │ ├── unit │ │ │ │ │ ├── application │ │ │ │ │ ├── domain │ │ │ │ │ ├── infrastructure │ │ │ ├── domain │ │ │ ├── infrastructure │ ├── fastapi │ │ ├── ...Sei que aparentemente parece uma estrutura redundante, mas acredite, ela é muito útil quando esta lidando com um projeto maior pois as coisas estarão perto de onde precisa estar.\nÉ isso, espero que tenha gostado, se tiver alguma sugestão ou dúvida, pode me chamar no linkedin.\n",
+    "description": "",
+    "tags": null,
+    "title": "Estrutura de pastas",
+    "uri": "/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html"
+  },
+  {
     "content": " Javascript Python Template String ",
     "description": "",
     "tags": null,

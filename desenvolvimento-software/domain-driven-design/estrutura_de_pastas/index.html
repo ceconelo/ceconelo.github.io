@@ -7,9 +7,9 @@
     <meta name="generator" content="Relearn 5.17.1+tip">
     <meta name="description" content="Base de conhecimento de Sonath Developer BR">
     <meta name="author" content="Thiago Oliveira">
-    <title>Linguagens :: Sonath - Wiki</title>
-    <link href="/linguagens/index.xml" rel="alternate" type="application/rss+xml" title="Linguagens :: Sonath - Wiki">
-    <link href="/linguagens/index.print.html" rel="alternate" type="text/html" title="Linguagens :: Sonath - Wiki">
+    <title>Estrutura de pastas :: Sonath - Wiki</title>
+    <link href="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.xml" rel="alternate" type="application/rss+xml" title="Estrutura de pastas :: Sonath - Wiki">
+    <link href="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.print.html" rel="alternate" type="text/html" title="Estrutura de pastas :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1689871597" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1689871597" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1689871597" rel="stylesheet">
@@ -41,25 +41,25 @@
       window.variants && variants.init( [ 'sonath' ] );
     </script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/linguagens/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-            <a class="nav nav-next topbar-link" href="/linguagens/javascript/index.html" title="Javascript (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <span class="nav nav-next topbar-link"><i class="fa fa-chevron-right fa-fw"></i></span>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev topbar-link" href="/index.html" title="Sonath - Base de Conhecimento (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev topbar-link" href="/desenvolvimento-software/domain-driven-design/index.html" title="Domain Driven Design (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-print-link">
-            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/linguagens/index.print.html">
+            <a class="print-link topbar-link" title='Print whole chapter (CTRL+ALT+p)' href="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.print.html">
               <i class="fas fa-print fa-fw"></i>
             </a>
           </div>
           <div id="top-github-link">
-            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/ceconelo/sonath.dev.br/tree/main/content/linguagens/_index.md" target="_blank">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/ceconelo/sonath.dev.br/tree/main/content/desenvolvimento-software/domain-driven-design/estrutura_de_pastas.md" target="_blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
@@ -67,10 +67,29 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Sonath - Base de Conhecimento</span></a><meta itemprop="position" content="1"> &gt; </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Linguagens</span><meta itemprop="position" content="2"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/desenvolvimento-software/index.html"><span itemprop="name">Dev. de Software</span></a><meta itemprop="position" content="2"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/desenvolvimento-software/domain-driven-design/index.html"><span itemprop="name">Domain Driven Design</span></a><meta itemprop="position" content="3"> &gt; </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Estrutura de pastas</span><meta itemprop="position" content="4"></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#overview">Overview</a>
+          <ul>
+            <li><a href="#como-exemplo-vamos-utilizar-apenar-um-módulo-para-ilustrar">Como exemplo vamos utilizar apenar um módulo para ilustrar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -79,17 +98,52 @@
           <article class="default">
             <header class="headline">
             </header>
-<h1 id="linguagens">Linguagens</h1>
+<h1 id="estrutura-de-pastas">Estrutura de pastas</h1>
 
-
-<ul class="children children-li children-sort-">
-	
-<li><a href="/linguagens/javascript/index.html">Javascript</a><ul>
-	</ul></li>
-<li><a href="/linguagens/python/index.html">Python</a><ul>
-	
-<li><a href="/linguagens/python/teste/index.html">Template String</a></li></ul></li>
-</ul>
+<p>A estrutura que sigo compartilhando é a que eu julgo ser a mais simples e eficiente para a maioria dos projetos que eu
+desenvolvo, isso não significa que seja a melhor ou a pior, apenas que eu gosto assim. Gosto da visão de um sistema
+modular e nesse sentido cada modulo tem a sua própria estrutura.</p>
+<p>Claro vale lembrar, estou seguindo DDD.</p>
+<h3 id="overview">Overview</h3>
+<p>Como ilustração vamos utilizar um projeto backend com fastapi para você entender como eu estruturo os projetos.</p>
+<p><strong>src</strong> - Onde fica todo o código fonte do projeto.</p>
+<p><strong>core</strong> - Aqui esta o coração da minha aplicação organizada em módulos.</p>
+<p><strong>fastapi</strong> - Aqui fica o código relacionado a tecnologia que estou utilizando (que neste caso é fastapi)</p>
+<p><strong>__seedwork</strong> - Aqui fica o código que é compartilhado entre os módulos (Esse é um conceito criado por <a href="https://martinfowler.com/bliki/Seedwork.html" target="_blank">Martin Fowler</a>)</p>
+<p><strong>tests</strong> - Aqui ficam os testes de integração e unitários</p>
+<h4 id="como-exemplo-vamos-utilizar-apenar-um-módulo-para-ilustrar">Como exemplo vamos utilizar apenar um módulo para ilustrar</h4>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>├── src
+</span></span><span style="display:flex;"><span>│   ├── core
+</span></span><span style="display:flex;"><span>│   │   ├── __seedwork
+</span></span><span style="display:flex;"><span>│   │   │   ├── application
+</span></span><span style="display:flex;"><span>│   │   │   ├── domain
+</span></span><span style="display:flex;"><span>│   │   │   ├── infrastructure
+</span></span><span style="display:flex;"><span>│   │   │   ├── tests
+</span></span><span style="display:flex;"><span>│   │   ├── products
+</span></span><span style="display:flex;"><span>│   │   │   ├── application
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── dto.py
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── use_cases.py
+</span></span><span style="display:flex;"><span>│   │   │   ├── domain
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── entities.py
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── repositories.py
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── validators.py
+</span></span><span style="display:flex;"><span>│   │   │   ├── infrastructure
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── fastapi
+</span></span><span style="display:flex;"><span>│   │   │   ├── tests
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── integration
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── application
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── domain
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── infrastructure
+</span></span><span style="display:flex;"><span>│   │   │   │   ├── unit
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── application
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── domain
+</span></span><span style="display:flex;"><span>│   │   │   │   │  ├── infrastructure
+</span></span><span style="display:flex;"><span>│   │   │   ├── domain
+</span></span><span style="display:flex;"><span>│   │   │   ├── infrastructure
+</span></span><span style="display:flex;"><span>│   ├── fastapi
+</span></span><span style="display:flex;"><span>│   │   ├── ...</span></span></code></pre></div><p>Sei que aparentemente parece uma estrutura redundante, mas acredite, ela é muito útil quando esta lidando com um projeto maior
+pois as coisas estarão perto de onde precisa estar.</p>
+<p>É isso, espero que tenha gostado, se tiver alguma sugestão ou dúvida, pode me chamar no <a href="https://www.linkedin.com/in/thiagoceconelo/" target="_blank">linkedin</a>.</p>
 
             <footer class="footline">
 
@@ -121,7 +175,7 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics enlarge morespace collapsible-menu">
-          <li data-nav-id="/linguagens/index.html" class="active parent "><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53" checked><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
+          <li data-nav-id="/linguagens/index.html" class=""><input type="checkbox" id="section-f82c1ce9a2a8e89205a7c30341909b53" aria-controls="subsections-f82c1ce9a2a8e89205a7c30341909b53"><label for="section-f82c1ce9a2a8e89205a7c30341909b53"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Linguagens</span></label><a class="padding" href="/linguagens/index.html"><b>001 </b>Linguagens<i class="fas fa-check read-icon"></i></a><ul id="subsections-f82c1ce9a2a8e89205a7c30341909b53" class="morespace collapsible-menu">
           <li data-nav-id="/linguagens/javascript/index.html" class=""><a class="padding" href="/linguagens/javascript/index.html">Javascript<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/linguagens/python/index.html" class="alwaysopen"><input type="checkbox" id="section-7da817bd2c81bf19ed37482b595ea78a" aria-controls="subsections-7da817bd2c81bf19ed37482b595ea78a" checked><label for="section-7da817bd2c81bf19ed37482b595ea78a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="/linguagens/python/index.html">Python<i class="fas fa-check read-icon"></i></a><ul id="subsections-7da817bd2c81bf19ed37482b595ea78a" class="morespace collapsible-menu">
           <li data-nav-id="/linguagens/python/teste/index.html" class=""><a class="padding" href="/linguagens/python/teste/index.html">Template String<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
@@ -134,9 +188,9 @@
           <li data-nav-id="/docker/compose/python-fastapi/dev-start/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-start/index.html">Dev/start<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/python-fastapi/dev-wait-for-it/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/dev-wait-for-it/index.html">Dev/wait-for-it<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docker/compose/python-fastapi/docker-compose/index.html" class=""><a class="padding" href="/docker/compose/python-fastapi/docker-compose/index.html">Docker Compose<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/desenvolvimento-software/index.html" class=""><input type="checkbox" id="section-894194a0916eb2af3113cebfcfa19db8" aria-controls="subsections-894194a0916eb2af3113cebfcfa19db8"><label for="section-894194a0916eb2af3113cebfcfa19db8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Dev. de Software</span></label><a class="padding" href="/desenvolvimento-software/index.html"><b>003 </b>Dev. de Software<i class="fas fa-check read-icon"></i></a><ul id="subsections-894194a0916eb2af3113cebfcfa19db8" class="morespace collapsible-menu">
-          <li data-nav-id="/desenvolvimento-software/domain-driven-design/index.html" class="alwaysopen"><input type="checkbox" id="section-faee93715b21630683045a4826e4783a" aria-controls="subsections-faee93715b21630683045a4826e4783a" checked><label for="section-faee93715b21630683045a4826e4783a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Domain Driven Design</span></label><a class="padding" href="/desenvolvimento-software/domain-driven-design/index.html">Domain Driven Design<i class="fas fa-check read-icon"></i></a><ul id="subsections-faee93715b21630683045a4826e4783a" class="morespace collapsible-menu">
-          <li data-nav-id="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html" class=""><a class="padding" href="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html">Estrutura de pastas<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/desenvolvimento-software/index.html" class="parent "><input type="checkbox" id="section-894194a0916eb2af3113cebfcfa19db8" aria-controls="subsections-894194a0916eb2af3113cebfcfa19db8" checked><label for="section-894194a0916eb2af3113cebfcfa19db8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Dev. de Software</span></label><a class="padding" href="/desenvolvimento-software/index.html"><b>003 </b>Dev. de Software<i class="fas fa-check read-icon"></i></a><ul id="subsections-894194a0916eb2af3113cebfcfa19db8" class="morespace collapsible-menu">
+          <li data-nav-id="/desenvolvimento-software/domain-driven-design/index.html" class="parent alwaysopen"><input type="checkbox" id="section-faee93715b21630683045a4826e4783a" aria-controls="subsections-faee93715b21630683045a4826e4783a" checked><label for="section-faee93715b21630683045a4826e4783a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Domain Driven Design</span></label><a class="padding" href="/desenvolvimento-software/domain-driven-design/index.html">Domain Driven Design<i class="fas fa-check read-icon"></i></a><ul id="subsections-faee93715b21630683045a4826e4783a" class="morespace collapsible-menu">
+          <li data-nav-id="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html" class="active"><a class="padding" href="/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html">Estrutura de pastas<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
         </ul>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
         <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
