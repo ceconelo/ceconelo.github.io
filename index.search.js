@@ -14,6 +14,13 @@ var relearn_search_index = [
     "uri": "/desenvolvimento-software/domain-driven-design/estrutura_de_pastas/index.html"
   },
   {
+    "content": "A regra do github é que você não pode fazer um fork privado de um repositório público, então o que vamos fazer é criar um espelho de um repositório público dentro de um repositório privado, aqui tem a documentação oficial para isso.\nPasso a passo Vamos criar um clone do repositório a ser espelhado passando a flag --bare (No final do processo este repositório será removido da sua máquina)\ngit clone --bare git@github.com:\u003cusuario-do-repositorio\u003e/\u003cnome-do-repositorio\u003e.git Criar um novo repositório privado no github com o mesmo nome do repositório a ser espelhado.\nRealizar o push do repositório espelhado para o repositório privado criado no passo anterior.\ncd nome-do-repositorio.git git push --mirror git@github.com:\u003cseu-usuario\u003e/\u003cnome-do-repositorio\u003e.git Remover o repostório clonado no passo 1.\ncd .. rm -rf nome-do-repositorio.git Agora você pode clonar o seu repositorio privado normalmente.\ngit clone git@github.com:\u003cseu-usuario\u003e/\u003cnome-do-repositorio\u003e.git Caso queira manter o seu repositório sincronizado com o repositório original, você pode adicionar o repositório original como um remote. Certifique-se também de desabilitar o push para o repositório original.\ngit remote add upstream git@github.com:\u003cusuario-do-repositorio\u003e/\u003cnome-do-repositorio\u003e.git git remote set-url --push upstream DISABLEPara ver a lista de repositorios remotos, execute o comando git remote -v. O resultado deve ser algo como:\norigin\tgit@github.com:\u003cseu-usuario\u003e/\u003cnome-do-repositorio\u003e.git (fetch) origin\tgit@github.com:\u003cseu-usuario\u003e/\u003cnome-do-repositorio\u003e.git (push) upstream\tgit@github.com:\u003cusuario-do-repositorio\u003e/\u003cnome-do-repositorio\u003e.git (fetch) upstream\tDISABLE (push) Quando você quiser puxar as mudanças do upstream você pode apenas dar um fetch no remoto e dar um rebase em cima do seu trabalho.\ngit fetch upstream git rebase upstream/masterE resolver os conflitos se houverem.\nÉ isso ai, agora você tem um fork privado do repositório original.\nPor hoje é só pessoal, até a próxima.\nCréditos https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274\n",
+    "description": "",
+    "tags": null,
+    "title": "Fork privado",
+    "uri": "/github/uteis/private-fork/index.html"
+  },
+  {
     "content": " Javascript Python Template String ",
     "description": "",
     "tags": null,
@@ -68,6 +75,13 @@ var relearn_search_index = [
     "tags": null,
     "title": "Dev/wait-for-it",
     "uri": "/docker/compose/python-fastapi/dev-wait-for-it/index.html"
+  },
+  {
+    "content": "",
+    "description": "",
+    "tags": null,
+    "title": "Github",
+    "uri": "/github/index.html"
   },
   {
     "content": "docker-compose.yml version: '3' services: app: build: context: . dockerfile: ./.docker/dev/Dockerfile command: - /start container_name: python-fastapi env_file: - ./.docker/dev/.env ports: - 8000:8000 volumes: - .:/home/python/app - ./.docker/dev/zsh/.p10k.zsh:/home/python/.p10k.zsh:delegated - ./.docker/dev/zsh/history:/home/python/zsh:delegated ",
@@ -131,5 +145,12 @@ var relearn_search_index = [
     "tags": null,
     "title": "Tags",
     "uri": "/tags/index.html"
+  },
+  {
+    "content": "Lorem Ipsum.\n",
+    "description": "",
+    "tags": null,
+    "title": "Úteis",
+    "uri": "/github/uteis/index.html"
   }
 ]

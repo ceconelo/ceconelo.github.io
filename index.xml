@@ -30,5 +30,12 @@ Um container é uma unidade de software que empacota o código e todas as suas d
 Nesta seção, vamos abordar alguns dos principais conceitos, metodologias, padrões e boas práticas que podem nos ajudar na construção de um software com mais qualidade, mais robusto e mais fácil de manter.
 Como muitos desses conceitos se misturam e se complementam, não há uma ordem específica para a leitura dos posts desta seção.</description>
     </item>
+    <item>
+      <title>Github</title>
+      <link>https://sonath.dev.br/github/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/github/index.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
