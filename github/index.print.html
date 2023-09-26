@@ -11,19 +11,19 @@
     <link href="https://sonath.dev.br/github/index.html" rel="canonical" type="text/html" title="Github :: Sonath - Wiki">
     <link href="/github/index.xml" rel="alternate" type="application/rss+xml" title="Github :: Sonath - Wiki">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1692985066" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1692985066" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1692985066" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692985066" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1692985066" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1692985066" rel="stylesheet">
-    <link href="/css/fonts.css?1692985066" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1692985066" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1692985066" rel="stylesheet">
-    <link href="/css/theme-sonath.css?1692985066" rel="stylesheet" id="variant-style">
-    <link href="/css/variant.css?1692985066" rel="stylesheet">
-    <link href="/css/print.css?1692985066" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1692985066" rel="stylesheet">
-    <link href="/css/ie.css?1692985066" rel="stylesheet">
-    <script src="/js/url.js?1692985066"></script>
-    <script src="/js/variant.js?1692985066"></script>
+    <link href="/css/fontawesome-all.min.css?1695697276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1695697276" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1695697276" rel="stylesheet">
+    <link href="/css/auto-complete.css?1695697276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1695697276" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1695697276" rel="stylesheet">
+    <link href="/css/fonts.css?1695697276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1695697276" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1695697276" rel="stylesheet">
+    <link href="/css/theme-sonath.css?1695697276" rel="stylesheet" id="variant-style">
+    <link href="/css/variant.css?1695697276" rel="stylesheet">
+    <link href="/css/print.css?1695697276" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1695697276" rel="stylesheet">
+    <link href="/css/ie.css?1695697276" rel="stylesheet">
+    <script src="/js/url.js?1695697276"></script>
+    <script src="/js/variant.js?1695697276"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -140,13 +140,53 @@ upstream	DISABLE (push)</code></pre></div><blockquote>
             </footer>
           </article>
 
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="patch-branch">Patch Branch</h1>
+
+<p>Imagine o seguinte cenário:
+Você esta desenvolvendo em um repositório que possui duas branches principais, &ldquo;A&rdquo; e &ldquo;B&rdquo;.
+Você está trabalhando na branch &ldquo;B&rdquo; e precisa fazer um hotfix na branch &ldquo;A&rdquo;, mas precisa que esse hotfix seja refletido
+também na branch &ldquo;B&rdquo;.</p>
+<p>Vamos ver no passo a passo como fazer isso.</p>
+<h3 id="passo-a-passo">Passo a passo</h3>
+<ol>
+<li>
+<p>Certifique-se de estar na branch A. Realize as alterações necessárias e faça um commit normalmente.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#87ceeb">&#34;hotfix xpto&#34;</span></span></span></code></pre></div></li>
+<li>
+<p><strong>Crie um patch da correção:</strong> Use o comando `git format-patch para criar um arquivo de patch que contenha as alterações que você fez na branch A:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git format-patch HEAD~1</span></span></code></pre></div><p><em>Isso criará um arquivo de patch com as alterações na branch atual. O HEAD~1 representa o último commit na branch A.
+Copie o nome que foi gerado para esse path: Será algo parecido com isso <code>0001-hotfix xpto.patch</code></em></p>
+</li>
+<li>
+<p>Mude para a branch B.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout B</span></span></code></pre></div></li>
+<li>
+<p><strong>Aplique o patch na branch B</strong>: Use o comando <code>git apply</code> para aplicar o patch que você criou da branch A na branch B:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git apply 0001-hotfix xpto.patch</span></span></code></pre></div></li>
+<li>
+<p>Agora basta fazer um commit normalmente na branch B.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#87ceeb">&#34;hotfix xpto&#34;</span></span></span></code></pre></div></li>
+</ol>
+<p>É isso ai, simples sim. Agora as alterações que você fez na branch A estão na branch B.</p>
+<p>Por hoje é só, até a próxima.</p>
+
+            <footer class="footline">
+
+            </footer>
+          </article>
+
           </section>
           </section>
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1692985066" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1692985066" defer></script>
-    <script src="/js/theme.js?1692985066" defer></script>
+    <script src="/js/clipboard.min.js?1695697276" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1695697276" defer></script>
+    <script src="/js/theme.js?1695697276" defer></script>
   </body>
 </html>

@@ -15,5 +15,14 @@
 Passo a passo Vamos criar um clone do repositório a ser espelhado passando a flag --bare (No final do processo este repositório será removido da sua máquina)
 git clone --bare git@github.</description>
     </item>
+    <item>
+      <title>Patch Branch</title>
+      <link>https://sonath.dev.br/github/uteis/branch-patch/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sonath.dev.br/github/uteis/branch-patch/index.html</guid>
+      <description>Imagine o seguinte cenário: Você esta desenvolvendo em um repositório que possui duas branches principais, &amp;ldquo;A&amp;rdquo; e &amp;ldquo;B&amp;rdquo;. Você está trabalhando na branch &amp;ldquo;B&amp;rdquo; e precisa fazer um hotfix na branch &amp;ldquo;A&amp;rdquo;, mas precisa que esse hotfix seja refletido também na branch &amp;ldquo;B&amp;rdquo;.
+Vamos ver no passo a passo como fazer isso.
+Passo a passo Certifique-se de estar na branch A. Realize as alterações necessárias e faça um commit normalmente.</description>
+    </item>
   </channel>
 </rss>
